@@ -1,0 +1,95 @@
+---
+outline: 2
+---
+
+# Flip Flop
+
+## Topologia
+
+<pan-container selector=".mermaid">
+
+<!--@include: @<!--@include: @/.includes/generic_flip_flop-topology.md-->
+
+</pan-container>
+
+## Interface de portas
+
+### `clock` <Badge type="success" text="INPUT" />
+
+Entrada do sinal de clock.
+
+- Tipo: `std_logic`
+
+### `clear` <Badge type="success" text="INPUT" />
+
+::: danger TO DO
+
+Descrição.
+
+:::
+
+- tipo: `std_logic`
+
+### `enable` <Badge type="success" text="INPUT" />
+
+::: danger TO DO
+
+Descrição.
+
+:::
+
+- tipo: `std_logic`
+
+### `source` <Badge type="success" text="INPUT" />
+
+::: danger TO DO
+
+Descrição.
+
+:::
+
+- tipo: `std_logic`
+
+### `state` <Badge type="danger" text="OUTPUT" />
+
+::: danger TO DO
+
+Escrever descrição state
+
+:::
+
+- tipo: `std_logic`
+- padrão: `0`
+
+## Usagem
+
+```vhdl
+FLIP_FLOP_1 : entity WORK.GENERIC_FLIP_FLOP
+    port map (
+        clock  => clock,
+        clear  => signal_clear,
+        enable => signal_enable,
+        source => signal_source,
+        state  => signal_state
+    );
+```
+
+## Diagrama RTL
+
+<pan-container>
+
+![Diagrama de RTL do Flip Flop](/images/reference/components/generic_flip_flop_netlist.svg){.w-full .dark-invert}
+
+</pan-container>
+
+## Casos de teste
+
+### Caso 1 <Badge type="info" text="tb_generic_flip_flop_case_1" />
+
+Forma de onda:
+
+<pan-container :grid="false">
+
+![Forma de onda do caso de teste 1 do Flip Flop](/images/reference/components/tb_generic_flip_flop_case_1.svg){.w-full .dark-invert}
+
+</pan-container>
