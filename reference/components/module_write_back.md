@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container>
-
-<!--@include: @<!--@include: @/.includes/module_write_back-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/module_write_back.drawio.svg)
 
 ## Interface genérica
 

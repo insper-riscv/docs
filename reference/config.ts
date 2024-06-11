@@ -8,32 +8,44 @@ export const sidebar : DefaultTheme.Sidebar = {
       link: '/reference/components/',
       collapsed: false,
       items: [
-        {
+        /* {
           text: 'Estruturas de dados',
         }, {
           text: 'Constantes Globais',
-        }, {
+        },  */{
           text: 'Top Level',
           link: '/reference/components/',
         }, {
-          text: 'Estágios',
+          text: 'CPU',
           collapsed: true,
           items: [
             {
-              text: 'IF - Busca Instrução',
-              link: '/reference/components/stage_if',
+              text: 'ETAPA IF - Busca Instrução',
+              link: '/reference/components/cpu_stage_if',
             }, {
-              text: 'ID - Decodifica Instrução',
-              link: '/reference/components/stage_id',
+              text: 'ETAPA ID - Decodifica Instrução',
+              link: '/reference/components/cpu_stage_id',
             }, {
-              text: 'EX - Executa',
-              link: '/reference/components/stage_ex',
+              text: 'ETAPA EX - Executa',
+              link: '/reference/components/cpu_stage_ex',
             }, {
-              text: 'MEM - Acessa à Memória',
-              link: '/reference/components/stage_mem',
+              text: 'ETAPA MEM - Acessa à Memória',
+              link: '/reference/components/cpu_stage_mem',
             }, {
-              text: 'WB - Escreve o Retorno',
-              link: '/reference/components/stage_wb',
+              text: 'ETAPA WB - Escreve o Retorno',
+              link: '/reference/components/cpu_stage_wb',
+            }, {
+              text: 'Unidade de Encaminhamento de Dados para Execução',
+              link: '/reference/components/cpu_execution_forwarding_unit',
+            }, {
+              text: 'Unidade de Encaminhamento de Dados para Desvio',
+              link: '/reference/components/cpu_branch_forwarding_unit',
+            }, {
+              text: 'Unidade de Controle de Hazards',
+              link: '/reference/components/cpu_hazard_control_unit',
+            }, {
+              text: 'TOP LEVEL - Visão Geral da CPU',
+              link: '/reference/components/cpu_top_level',
             },
           ],
         },  {
@@ -58,6 +70,15 @@ export const sidebar : DefaultTheme.Sidebar = {
             }, {
               text: 'Escrita de Retorno',
               link: '/reference/components/module_write_back',
+            }, {
+              text: 'Comparação para Desvio',
+              link: '/reference/components/module_branch_compare_unit',
+            }, {
+              text: 'Desvio',
+              link: '/reference/components/module_branch_unit',
+            }, {
+              text: 'Interface de Memória',
+              link: '/reference/components/module_memory_interface',
             },
           ],
         }, {
@@ -73,6 +94,12 @@ export const sidebar : DefaultTheme.Sidebar = {
             }, {
               text: 'Controlador da ULA',
               link: '/reference/components/rv32i_alu_controller',
+            }, {
+              text: 'Deslocador da ULA',
+              link: '/reference/components/rv32i_alu_shifter',
+            }, {
+              text: 'Controlador de Desvio',
+              link: '/reference/components/rv32i_branch_controller',
             },
           ],
         }, {
@@ -80,6 +107,9 @@ export const sidebar : DefaultTheme.Sidebar = {
           collapsed: true,
           items: [
             {
+              text: 'Carry Lookahead',
+              link: '/reference/components/generic_carry_lookahead',
+            }, {
               text: 'Somador',
               link: '/reference/components/generic_adder',
             }, {
@@ -92,6 +122,9 @@ export const sidebar : DefaultTheme.Sidebar = {
               text: 'Multiplexador 4x1',
               link: '/reference/components/generic_mux_4x1',
             }, {
+              text: 'Multiplexador 32x1',
+              link: '/reference/components/generic_mux_32x1',
+            }, {
               text: 'RAM',
               link: '/reference/components/generic_ram',
             }, {
@@ -100,22 +133,13 @@ export const sidebar : DefaultTheme.Sidebar = {
             }, {
               text: 'ROM',
               link: '/reference/components/generic_rom',
-            }, //{
-            //  text: 'Extensor de sinal',
-            //  link: '/reference/components/generic_signal_extender',
-            //}, {
-            //  text: 'Flip Flop',
-            //  link: '/reference/components/generic_flip_flop',
-            //}, {
-            //  text: 'Debounce',
-            //  link: '/reference/components/generic_debounce',
-            //}, {
-            //  text: 'Detector de borda',
-            //  link: '/reference/components/generic_edge_detector',
-            //}, {
-            //  text: 'Contador',
-            //  link: '/reference/components/generic_counter',
-            //},
+            }, {
+              text: 'ROM Quartus',
+              link: '/reference/components/generic_rom_quartus',
+            }, {
+              text: 'Extensor de Sinal',
+              link: '/reference/components/generic_signal_extender',
+            },
           ],
         },
       ],
@@ -130,7 +154,7 @@ export const sidebar : DefaultTheme.Sidebar = {
           link: '/reference/isa/pseudo',
         },
       ],
-    }, {
+    }, /* {
       text: 'Testes',
       items: [
         {
@@ -139,6 +163,6 @@ export const sidebar : DefaultTheme.Sidebar = {
           text: 'Utilidades',
         },
       ],
-    },
+    }, */
   ],
 }

@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container selector=".mermaid">
-
-<!--@include: @<!--@include: @/.includes/generic_signal_extender-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/generic_signal_extender.drawio.svg)
 
 ## Interface genérica
 

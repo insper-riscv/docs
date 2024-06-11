@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container selector=".mermaid">
-
-<!--@include: @<!--@include: @/.includes/generic_mux_4x1-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/generic_mux_4x1.drawio.svg)
 
 ## Interface genérica
 

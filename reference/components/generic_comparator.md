@@ -12,15 +12,7 @@ Comparador
 
 ## Topologia
 
-<pan-container selector=".mermaid">
-
-::: danger TO DO
-
-Topologia
-
-:::
-
-</pan-container>
+![alt text](/public/images/reference/report_components/generic_comparator.drawio.svg)
 
 ## Interface genérica
 

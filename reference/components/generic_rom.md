@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container selector=".mermaid">
-
-<!--@include: @<!--@include: @/.includes/generic_rom-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/generic_rom.drawio.svg)
 
 ## Interface genérica
 

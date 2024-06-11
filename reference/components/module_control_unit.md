@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container>
-
-<!--@include: @<!--@include: @/.includes/module_control_unit-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/module_control_unit.drawio.svg)
 
 ## Interface genérica
 

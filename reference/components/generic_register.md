@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container selector=".mermaid">
-
-<!--@include: @<!--@include: @/.includes/generic_register-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/generic_register.drawio.svg)
 
 ## Interface genérica
 

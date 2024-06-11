@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container>
-
-<!--@include: @<!--@include: @/.includes/module_register_file-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/module_register_file.drawio.svg)
 
 ## Interface genérica
 

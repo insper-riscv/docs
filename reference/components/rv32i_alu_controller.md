@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container>
-
-<!--@include: @<!--@include: @/.includes/rv32i_alu_conroller-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/rv32i_alu_controller.drawio.svg)
 
 ## Interface genérica
 
