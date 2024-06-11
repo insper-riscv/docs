@@ -223,7 +223,7 @@ Em caso de overflow, ele é ignorado.
 
 ##### Sintaxe
 
-A instrução ADDI é do tipo I, tendo uma funct3 e uma funct7 próprias, como ilustrado na Tabela ADDI.
+A instrução ADDI é do tipo I, tendo uma funct3 própria, como ilustrado na Tabela ADDI.
 
 | Tipo |   31-20   | 19-15 |  14-12  | 11-7 |  6-0   |
 | :--: | :-------: | :---: | :-----: | :--: | :----: |
@@ -691,7 +691,7 @@ a ter 6 bits cada).
 
 A instrução SLLI é do tipo I, tendo uma funct3 e uma funct7 próprias, como ilustrado na Tabela SLLI.
 
-| Tipo |   31-26   | 24-20 | 19-15 |  14-12  | 11-7 |  6-0   |
+| Tipo |   31-25   | 24-20 | 19-15 |  14-12  | 11-7 |  6-0   |
 | :--: | :-------: | :---: | :---: | :-----: | :--: | :----: |
 |  I   | `0000000` | shamt |  rs1  |  `001`  |  rd  | OP-IMM |
 <p class="table_subtitle"><b>Tabela SLLI</b> - Tabela com sintaxe da instrução SLLI.</p>
@@ -748,7 +748,7 @@ a ter 6 bits cada).
 
 A instrução SRLI é do tipo I, tendo uma funct3 e uma funct7 próprias, como ilustrado na Tabela SRLI.
 
-| Tipo |   31-26   | 24-20 | 19-15 |  14-12  | 11-7 |  6-0   |
+| Tipo |   31-25   | 24-20 | 19-15 |  14-12  | 11-7 |  6-0   |
 | :--: | :-------: | :---: | :---: | :-----: | :--: | :----: |
 |  I   | `0000000` | shamt |  rs1  |  `101`  |  rd  | OP-IMM |
 <p class="table_subtitle"><b>Tabela SRLI</b> - Tabela com sintaxe da instrução SRLI.</p>
@@ -806,7 +806,7 @@ a ter 6 bits cada).
 
 A instrução SRLI é do tipo I, tendo uma funct3 e uma funct7 próprias, como ilustrado na Tabela SRLI.
 
-| Tipo |   31-26   | 25-20 | 19-15 |  14-12  | 11-7 |  6-0   |
+| Tipo |   31-25   | 24-20 | 19-15 |  14-12  | 11-7 |  6-0   |
 | :--: | :-------: | :---: | :---: | :-----: | :--: | :----: |
 |  I   | `0100000` | shamt |  rs1  |  `101`  |  rd  | OP-IMM |
 <p class="table_subtitle"><b>Tabela SRAI</b> - Tabela com sintaxe da instrução SRAI.</p>
