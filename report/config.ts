@@ -11,14 +11,8 @@ export const sidebar : DefaultTheme.Sidebar = {
       text: 'Documentos',
       items: [
         {
-          text: 'Relatório',
-          link: '/report/',
-        }, {
-          text: 'Apêndice A',
-          link: '/report/appendix-a/',
-        }, {
-          text: 'Anexo A',
-          link: '/report/attachment-a/',
+          text: 'Relatório 2024_1',
+          link: '/report/2024_1/',
         },
       ],
     },
