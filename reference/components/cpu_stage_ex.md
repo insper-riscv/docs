@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container selector=".mermaid">
-
-<!--@include: @<!--@include: @/.includes/stage_ex-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/cpu_stage_ex.drawio.svg)
 
 ## Interface genérica
 

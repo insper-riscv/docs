@@ -6,11 +6,7 @@ outline: 2
 
 ## Topologia
 
-<pan-container>
-
-<!--@include: @<!--@include: @/.includes/stage_mem-topology.md-->
-
-</pan-container>
+![alt text](/public/images/reference/report_components/cpu_stage_mem.drawio.svg)
 
 ## Interface genérica
 
