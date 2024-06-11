@@ -2,7 +2,7 @@
 outline: 2
 ---
 
-# Nome Componente
+# Multiplexador 32x1
 
 ## Topologia
 

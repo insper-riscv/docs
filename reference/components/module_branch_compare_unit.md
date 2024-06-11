@@ -2,7 +2,7 @@
 outline: 2
 ---
 
-# Nome Componente
+# Unidade de Comparação para Desvio
 
 ## Topologia
 

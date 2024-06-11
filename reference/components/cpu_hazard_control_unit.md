@@ -2,7 +2,7 @@
 outline: 2
 ---
 
-# Nome Componente
+# Unidade de Controle de _Hazards_
 
 ## Topologia
 

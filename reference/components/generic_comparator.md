@@ -4,12 +4,6 @@ outline: 2
 
 # Comparador
 
-::: danger TO DO
-
-Comparador
-
-:::
-
 ## Topologia
 
 ![alt text](/public/images/reference/report_components/generic_comparator.drawio.svg)

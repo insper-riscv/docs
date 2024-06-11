@@ -2,7 +2,7 @@
 outline: 2
 ---
 
-# Nome Componente
+# Interface de Memória
 
 ## Topologia
 
