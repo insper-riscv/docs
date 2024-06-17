@@ -17,23 +17,30 @@ export const sidebar : DefaultTheme.Sidebar = {
           link: '/reference/components/',
         }, {
           text: 'CPU',
+          link: '/reference/components/cpu_top_level',
           collapsed: true,
           items: [
             {
-              text: 'ETAPA IF - Busca Instrução',
-              link: '/reference/components/cpu_stage_if',
-            }, {
-              text: 'ETAPA ID - Decodifica Instrução',
-              link: '/reference/components/cpu_stage_id',
-            }, {
-              text: 'ETAPA EX - Executa',
-              link: '/reference/components/cpu_stage_ex',
-            }, {
-              text: 'ETAPA MEM - Acessa à Memória',
-              link: '/reference/components/cpu_stage_mem',
-            }, {
-              text: 'ETAPA WB - Escreve o Retorno',
-              link: '/reference/components/cpu_stage_wb',
+              text: 'Pipeline',
+              collapsed: false,
+              items: [
+                {
+                  text: 'IF - Busca Instrução',
+                  link: '/reference/components/cpu_stage_if',
+                }, {
+                  text: 'ID - Decodifica Instrução',
+                  link: '/reference/components/cpu_stage_id',
+                }, {
+                  text: 'EX - Executa',
+                  link: '/reference/components/cpu_stage_ex',
+                }, {
+                  text: 'MEM - Acessa à Memória',
+                  link: '/reference/components/cpu_stage_mem',
+                }, {
+                  text: 'WB - Escreve o Retorno',
+                  link: '/reference/components/cpu_stage_wb',
+                },
+              ]
             }, {
               text: 'Unidade de Encaminhamento de Dados para Execução',
               link: '/reference/components/cpu_execution_forwarding_unit',
@@ -43,9 +50,6 @@ export const sidebar : DefaultTheme.Sidebar = {
             }, {
               text: 'Unidade de Controle de Hazards',
               link: '/reference/components/cpu_hazard_control_unit',
-            }, {
-              text: 'TOP LEVEL - Visão Geral da CPU',
-              link: '/reference/components/cpu_top_level',
             },
           ],
         },  {

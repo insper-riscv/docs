@@ -21,26 +21,20 @@ export const pt = defineConfig({
         text: 'Mais',
         items: [
           {
-            text: 'Sobre',
-            link: '/guide/',
-          }, {
-            text: 'Começando',
-            link: '/guide/',
-          }, {
-            text: 'Organização',
-            link: '/reference/components/',
-          }, {
-            text: 'Especificação',
-            link: '/reference/components/',
+            text: 'Relatório',
+            link: '/report/'
           }, {
             text: 'Bibliografia',
             link: '/guide/bibliography'
           }, {
+            text: 'Insper Capstone',
+            link: 'https://www.insper.edu.br/pfe/'
+          }, {
+            text: 'RISC-V Brazil',
+            link: 'https://riscvbr.org/'
+          }, {
             text: 'CTI Renato Archer',
             link: 'https://www.gov.br/cti/pt-br'
-          }, {
-            text: 'PFE Insper',
-            link: 'https://www.insper.edu.br/pfe/'
           }
         ],
       },

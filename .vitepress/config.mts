@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
-import markdownItFootnote from 'markdown-it-footnote'
 import implicitFigures from 'markdown-it-image-figures'
+import table_captions from 'markdown-it-table-captions'
 
 import { pt, search as ptSearch } from '../config'
 import { en } from '../en/config'
@@ -56,10 +56,10 @@ export default defineConfig(withMermaid({
 
   markdown:  {
     config(md) {
-      md.use(markdownItFootnote)
       md.use(implicitFigures, {
         figcaption: true,
       })
+      md.use(table_captions)
     }
   },
 }))

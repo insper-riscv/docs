@@ -11,7 +11,7 @@ export const sidebar : DefaultTheme.Sidebar = {
       text: 'Documentos',
       items: [
         {
-          text: 'Relatório 2024_1',
+          text: 'Relatório 2024.1',
           link: '/report/2024_1/',
         },
       ],
