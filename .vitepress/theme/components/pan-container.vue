@@ -74,6 +74,9 @@ function enterFullscreen() {
 }
 
 onMounted(() => {
+    if (wrap.value.children?.length !== 1)
+        return
+
     instance = panZoom(wrap.value.querySelector(props.selector), {
         minZoom: 1,
         maxZoom: props.maxZoom,
