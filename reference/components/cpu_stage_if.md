@@ -16,11 +16,35 @@ Entrada do sinal de clock.
 
 - Tipo: `std_logic`
 
-::: danger TO DO
+### `clear` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do sinal que limpa o(s) dado(s) do componente.
 
-:::
+- Tipo: `std_logic`
+
+### `enable` <Badge type="success" text="INPUT" />
+
+Entrada do sinal que ativa o componente.
+
+- Tipo: `std_logic`
+
+### `source` <Badge type="success" text="INPUT" />
+
+Entrada de registro que contém os sinais de controle da etapa IF vindos da etapa ID.
+
+- Tipo: `t_CONTROL_IF`
+
+### `address_jump` <Badge type="success" text="INPUT" />
+
+Entrada de dados que contém o endereço para desvio na memória ROM vindo da etapa ID.
+
+- Tipo: `t_DATA`
+
+### `address_data` <Badge type="danger" text="OUTPUT" />
+
+Saída de dados que contém o endereço da próxima instrução a ser executada.
+
+- Tipo: `t_DATA`
 
 ## Usagem
 

@@ -25,11 +25,47 @@ Entrada do sinal de clock.
 
 - Tipo: `std_logic`
 
-::: danger TO DO
+### `clear` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do sinal que limpa o(s) dado(s) do componente.
 
-:::
+- Tipo: `std_logic`
+
+### `enable` <Badge type="success" text="INPUT" />
+
+Entrada do sinal que ativa o componente.
+
+- Tipo: `std_logic`
+
+### `forward` <Badge type="success" text="INPUT" />
+
+Entrada de registro que contém dados encaminhados das etapas WB e MEM.
+
+- Tipo: `t_FORWARD_EXECUTION`
+
+### `source` <Badge type="success" text="INPUT" />
+
+Entrada de registro que contém os dados vindos da etapa ID do pipeline.
+
+- Tipo: `t_SIGNALS_ID_EX`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída de registro que contém os dados vindos da etapa EX do pipeline.
+
+- Tipo: `t_SIGNALS_EX_MEM`
+
+### `select_source_1` <Badge type="danger" text="OUTPUT" />
+
+Endereço do registrador primário do banco de registradores.
+
+- Tipo: `t_REGISTER`
+
+### `select_source_2` <Badge type="danger" text="OUTPUT" />
+
+Endereço do registrador secundário do banco de registradores.
+
+- Tipo: `t_REGISTER`
 
 ## Usagem
 

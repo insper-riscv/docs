@@ -21,14 +21,14 @@ Largura dos vetores de entrada e saída de dados.
 
 ### `source_1` <Badge type="success" text="INPUT" />
 
-Vetor de entrada primário. `destination <= source_1` se `selector = '0'`.
+Entrada primária de dados. `destination <= source_1` se `selector = '0'`.
 
 - Tipo: `std_logic_vector`
 - Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ### `source_2` <Badge type="success" text="INPUT" />
 
-Vetor de entrada secundário. `destination <= source_2` se `selector = '1'`.
+Entrada secundária de dados. `destination <= source_2` se `selector = '1'`.
 
 - Tipo: `std_logic_vector`
 - Largura: variável `(DATA_WIDTH - 1) downto 0`
@@ -41,7 +41,7 @@ Seleção do vetor de saída de `destination`.
 
 ### `destination` <Badge type="danger" text="OUTPUT" />
 
-Vetor de saída.
+Saída de dados.
 
 - Tipo: `std_logic_vector`
 - Largura: variável `(DATA_WIDTH - 1) downto 0`

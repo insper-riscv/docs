@@ -25,11 +25,41 @@ Entrada do sinal de clock.
 
 - Tipo: `std_logic`
 
-::: danger TO DO
+### `clear` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do sinal que limpa o(s) dado(s) do componente.
 
-:::
+- Tipo: `std_logic`
+
+### `enable` <Badge type="success" text="INPUT" />
+
+Entrada do sinal que ativa o componente.
+
+- Tipo: `std_logic`
+
+### `source` <Badge type="success" text="INPUT" />
+
+Entrada de registro que contém os dados vindos da etapa MEM do pipeline.
+
+- Tipo: `t_SIGNALS_MEM_WB`
+
+### `enable_destination` <Badge type="danger" text="OUTPUT" />
+
+Saída de sinal que ativa escrita no banco de registradores.
+
+- Tipo: `std_logic`
+
+### `select_destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do endereço do registrador de destino.
+
+- Tipo: `t_REGISTER`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do valor a ser armazenado no registrador de destino.
+
+- Tipo: `t_DATA`
 
 ## Usagem
 

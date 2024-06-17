@@ -47,7 +47,7 @@ Entrada do sinal de clock.
 
 ### `enable` <Badge type="success" text="INPUT" />
 
-Entrada do sinal habilitação do uso da memória para leitura ou escrita.
+Entrada do sinal que ativa o componente.
 
 - Tipo: `std_logic`
 

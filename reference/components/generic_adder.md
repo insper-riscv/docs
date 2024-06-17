@@ -28,14 +28,14 @@ Valor padrão de incremento. Dispensa necessidade de atribuir entrada `source_2`
 
 ### `source_1` <Badge type="success" text="INPUT" />
 
-Vetor de entrada primário.
+Entrada primária de dados.
 
 - Tipo: `std_logic_vector`
 - Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ### `source_2` <Badge type="success" text="INPUT" />
 
-Vetor de entrada secundário.
+Entrada secundária de dados.
 
 - Tipo: `std_logic_vector`
 - Largura: variável `(DATA_WIDTH - 1) downto 0`
@@ -43,7 +43,7 @@ Vetor de entrada secundário.
 
 ### `destination` <Badge type="danger" text="OUTPUT" />
 
-Saída de dados com o resultado de `source_1 + source_2`.
+Saída de dados.
 
 - Tipo: `std_logic_vector`
 - Largura: `(DATA_WIDTH - 1) downto 0`

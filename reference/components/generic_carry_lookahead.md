@@ -10,11 +10,12 @@ outline: 2
 
 ## Interface genérica
 
-::: warning ATENÇÃO!
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-to do
+Largura dos vetores de entrada e saída de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `8`
 
 ## Interface de portas
 
