@@ -147,5 +147,6 @@ import { VPTeamMembers } from 'vitepress/theme'
 <!-- <VPTeamMembers :members="$frontmatter.members24_2" size="small" /> -->
 
 ## Equipe Capstone 2024.1
+[<Badge type="tip" text="Saiba mais ⧉"/>](https://www.insper.edu.br/noticias/alunos-desenvolvem-processador-para-o-ministerio-da-ciencia-tecnologia-e-inovacao/)
 
 <VPTeamMembers :members="$frontmatter.members24_1" size="small" />
