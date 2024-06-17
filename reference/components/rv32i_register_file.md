@@ -32,43 +32,43 @@ Entrada do sinal de clock.
 
 - Tipo: `std_logic`
 
-### `enable`
+### `enable` <Badge type="success" text="INPUT" />
 
 Entrada de sinal que ativa uso do banco de registradores para armazenar valor.
 
 - tipo: `std_logic`
 
-### `address_destination`
+### `address_destination` <Badge type="success" text="INPUT" />
 
 Entrada de endereço de registrador para armazenar valor.
 
 - tipo: `std_logic_vector((ADDRESS_WIDTH - 1) downto 0)`
 
-### `address_source_1`
+### `address_source_1` <Badge type="success" text="INPUT" />
 
 Entrada de endereço de registrador primária.
 
 - tipo: `std_logic_vector((ADDRESS_WIDTH - 1) downto 0)`
 
-### `address_source_2`
+### `address_source_2` <Badge type="success" text="INPUT" />
 
 Entrada de endereço de registrador secundária.
 
 - tipo: `std_logic_vector((ADDRESS_WIDTH - 1) downto 0)`
 
-### `data_destination`
+### `data_destination` <Badge type="success" text="INPUT" />
 
 Entrada de valor para armazenar em registrador.
 
 - tipo: `std_logic_vector((DATA_WIDTH - 1) downto 0)`
 
-### `data_source_1`
+### `data_source_1` <Badge type="danger" text="OUTPUT" />
 
 Saída de valor de registrador primária.
 
 - tipo: `std_logic_vector((DATA_WIDTH - 1) downto 0)`
 
-### `data_source_2`
+### `data_source_2` <Badge type="danger" text="OUTPUT" />
 
 Saída de valor de registrador secundária.
 

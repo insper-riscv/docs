@@ -39,6 +39,19 @@ Deve ser menor ou igual a `ADDRESS_WIDTH`.
 
 ## Interface de portas
 
+### `clock` <Badge type="success" text="INPUT" />
+
+Entrada do sinal de clock.
+
+- Tipo: `std_logic`
+
+::: warning ATENÇÃO!
+
+Apesar de o componente ROM ter clock na versão mais recente (2024_1), foi usada uma memória virtual para realização dos
+testes baseada em uma versão anterior da ROM que não tinha clock, que está representada no diagrama do TOP_LEVEL do projeto.
+
+:::
+
 ### `address` <Badge type="success" text="INPUT" />
 
 Entrada de endereço da memória.
