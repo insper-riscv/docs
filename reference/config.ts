@@ -96,8 +96,8 @@ export const sidebar : DefaultTheme.Sidebar = {
               text: 'Unidade Lógica e Aritmética',
               link: '/reference/components/rv32i_alu',
             }, {
-              text: 'Controlador da ULA',
-              link: '/reference/components/rv32i_alu_controller',
+              text: 'Conversor de Tipo',
+              link: '/reference/components/rv32i_type_converter',
             }, {
               text: 'Deslocador da ULA',
               link: '/reference/components/rv32i_alu_shifter',
