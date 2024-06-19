@@ -10,19 +10,35 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
 
 ## Interface de portas
 
-::: danger TO DO
+### `select_function` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do vetor de seleção do tipo de vetor de dados para conversão.
 
-:::
+- Tipo: `std_logic_vector`
+- Largura: `3`
+
+### `source` <Badge type="success" text="INPUT" />
+
+Entrada do vetor de dados.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do vetor de dados.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Diagrama RTL
 
