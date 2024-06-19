@@ -44,6 +44,7 @@ Este é o registro dos pontos de controle do estágio Decodifica Instrução. A
 partir do qual é possível controlar os seguintes aspectos, respecitvamente:
 
 - `enable_branch`: caso ativado, indica que a instrução é do tipo B;
+- `enable_jalr`: caso ativado, indica que a instrução é a JALR;
 - `enable_jump`: caso ativado, indica que a instrução é do tipo J;
 - `select_jump`: caso ativado, seleciona o endereço de desvio
   `register + immediate`; caso contrário, `PC + immediate`.
@@ -51,6 +52,7 @@ partir do qual é possível controlar os seguintes aspectos, respecitvamente:
 ```vhdl
 type t_CONTROL_ID is record
     enable_branch : std_logic;
+    enable_jalr   : std_logic;
     enable_jump   : std_logic;
     select_jump   : std_logic;
 end record;
@@ -58,6 +60,7 @@ end record;
 
 constant NULL_CONTROL_ID : t_CONTROL_ID := (
     enable_branch   => '0',
+    enable_jalr     => '0',
     enable_jump     => '0',
     select_jump     => '0'
 );

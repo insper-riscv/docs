@@ -8,11 +8,11 @@ export const sidebar : DefaultTheme.Sidebar = {
       link: '/reference/components/',
       collapsed: false,
       items: [
-        /* {
+        {
           text: 'Estruturas de dados',
         }, {
           text: 'Constantes Globais',
-        },  */{
+        }, {
           text: 'Top Level',
           link: '/reference/components/',
         }, {
