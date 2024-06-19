@@ -10,19 +10,49 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `4`
+
+### `OPCODE_WIDTH` <Badge type="neutral" text="GENERIC" />
+
+Largura do opcode da instrução.
+
+- Tipo: `natural`
+- Padrão: `OPCODE_WIDTH`
 
 ## Interface de portas
 
-::: danger TO DO
+### `opcode` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do opcode da instrução.
 
-:::
+- Tipo: `std_logic_vector`
+- Largura: `(OPCODE_WIDTH - 1) downto 0`
+
+### `funct_3` <Badge type="success" text="INPUT" />
+
+Entrada da funct_3 da instrução.
+
+- Tipo: `std_logic_vector`
+- Largura: `3`
+
+### `funct_7` <Badge type="success" text="INPUT" />
+
+Entrada da funct_7 da instrução.
+
+- Tipo: `std_logic_vector`
+- Largura: `7`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do seletor da ULA.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 

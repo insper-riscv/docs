@@ -12,7 +12,7 @@ outline: 2
 
 ### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Largura dos vetores de entrada e saída de dados.
+Largura dos vetores de dados.
 
 - Tipo: `natural`
 - Padrão: `8`

@@ -10,19 +10,65 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
+
+### `INSTRUCTION_WIDTH` <Badge type="neutral" text="GENERIC" />
+
+Largura dos vetore de instrução.
+
+- Tipo: `natural`
+- Padrão: `INSTRUCTION_WIDTH`
 
 ## Interface de portas
 
-::: danger TO DO
+### `clear` <Badge type="success" text="INPUT" />
 
-Diagrama a nível de registradores
+Entrada do sinal que limpa o(s) dado(s) do componente.
 
-:::
+- Tipo: `std_logic`
+
+### `instruction` <Badge type="success" text="INPUT" />
+
+Entrada da instrução a ser executada.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(INSTRUCTION_WIDTH - 1) downto 0`
+
+### `immediate` <Badge type="danger" text="OUTPUT" />
+
+Saída do valor atual do imediato.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `control_id` <Badge type="danger" text="OUTPUT" />
+
+Saída de registro que contém os sinais de controle da etapa ID.
+
+- Tipo: `t_CONTROL_ID`
+
+### `control_ex` <Badge type="danger" text="OUTPUT" />
+
+Saída de registro que contém os sinais de controle da etapa EX.
+
+- Tipo: `t_CONTROL_EX`
+
+### `control_mem` <Badge type="danger" text="OUTPUT" />
+
+Saída de registro que contém os sinais de controle da etapa MEM.
+
+- Tipo: `t_CONTROL_MEM`
+
+### `control_wb` <Badge type="danger" text="OUTPUT" />
+
+Saída de registro que contém os sinais de controle da etapa WB.
+
+- Tipo: `t_CONTROL_WB`
 
 ## Usagem
 

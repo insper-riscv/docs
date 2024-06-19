@@ -8,7 +8,7 @@ outline: 2
 
 <pan-container>
 
-![Topologia do Top Level](/images/reference/components/top_level_core.drawio.svg){.w-full .dark-invert}
+![Topologia do Top Level](/images/reference/report_components/top_level.drawio.svg){.w-full .dark-invert}
 
 </pan-container>
 

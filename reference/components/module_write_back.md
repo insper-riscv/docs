@@ -10,19 +10,41 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
 
 ## Interface de portas
 
-::: danger TO DO
+### `selector` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do seletor do valor do registrador de destino.
 
-:::
+- Tipo: `std_logic`
+
+### `source_execution` <Badge type="success" text="INPUT" />
+
+Entrada do valor do registrador de destino vindo da ULA.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `source_memory` <Badge type="success" text="INPUT" />
+
+Entrada do valor do registrador de destino vindo da memória RAM.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do valor do registrador destino.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 

@@ -10,11 +10,12 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
 
 ## Interface de portas
 
@@ -24,11 +25,37 @@ Entrada do sinal de clock.
 
 - Tipo: `std_logic`
 
-::: danger TO DO
+### `clear` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do sinal que limpa o(s) dado(s) do componente.
 
-:::
+- Tipo: `std_logic`
+
+### `enable` <Badge type="success" text="INPUT" />
+
+Entrada do sinal que ativa o componente.
+
+- Tipo: `std_logic`
+
+### `selector` <Badge type="success" text="INPUT" />
+
+Entrada do sinal que seleciona o endereço da memória ROM a ser acessado.
+
+- Tipo: `std_logic`
+
+### `source` <Badge type="success" text="INPUT" />
+
+Entrada do vetor de dados.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do valor atual do PC.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 

@@ -10,19 +10,56 @@ outline: 2
 
 ## Interface genérica
 
-::: warning ATENÇÃO!
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-to do
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
+
+### `FUNCTION_WIDTH` <Badge type="neutral" text="GENERIC" />
+
+Largura da função usada como seletor.
+
+- Tipo: `natural`
+- Padrão: `FUNCT3_WIDTH + 1`
 
 ## Interface de portas
 
-::: warning ATENÇÃO!
+### `select_function` <Badge type="success" text="INPUT" />
 
-to do
+Entrada do vetor de seleção da operação de bits a ser realizada.
 
-:::
+- Tipo: `std_logic_vector`
+- Largura: variável `(FUNCTION_WIDTH - 1) downto 0`
+
+### `source_data_in` <Badge type="success" text="INPUT" />
+
+Entrada de dados que contém o valor vindo da memória RAM.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `source_data_out` <Badge type="success" text="INPUT" />
+
+Entrada de dados que contém o valor a ser armazenado na memória RAM.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `destination_data_in` <Badge type="danger" text="OUTPUT" />
+
+Saída de dados que contém o valor vindo da memória RAM.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `destination_data_out` <Badge type="danger" text="OUTPUT" />
+
+Saída de dados que contém o valor a ser armazenado na memória RAM.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 

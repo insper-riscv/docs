@@ -10,19 +10,83 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
+
+### `FUNCTION_WIDTH` <Badge type="neutral" text="GENERIC" />
+
+Largura da função usada como seletor.
+
+- Tipo: `natural`
+- Padrão: `4`
 
 ## Interface de portas
 
-::: danger TO DO
+### `select_source_1` <Badge type="success" text="INPUT" />
 
-Diagrama a nível de registradores
+Entrada do seletor primário do valor a ser usado pela ULA.
 
-:::
+- Tipo: `std_logic_vector`
+- Largura: `2`
+
+### `select_source_2` <Badge type="success" text="INPUT" />
+
+Entrada do seletor secundário do valor a ser usado pela ULA.
+
+- Tipo: `std_logic_vector`
+- Largura: `2`
+
+### `select_function` <Badge type="success" text="INPUT" />
+
+Entrada do vetor de seleção da operação a ser realizada na ULA.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(FUNCTION_WIDTH - 1) downto 0`
+
+### `address_program` <Badge type="success" text="INPUT" />
+
+Entrada do valor do PC.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `source_1` <Badge type="success" text="INPUT" />
+
+Entrada do valor do registrador primário.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `source_2` <Badge type="success" text="INPUT" />
+
+Entrada do valor do registrador secundário.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `immediate` <Badge type="success" text="INPUT" />
+
+Entrada do valor do Imediato.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `overflow` <Badge type="danger" text="OUTPUT" />
+
+Saída de sinal que indica se houve overflow na ULA.
+
+- Tipo: `std_logic`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída da ULA.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 

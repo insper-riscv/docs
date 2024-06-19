@@ -10,19 +10,48 @@ outline: 2
 
 ## Interface genérica
 
-::: warning ATENÇÃO!
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-to do
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
 
 ## Interface de portas
 
-::: warning ATENÇÃO!
+### `selector` <Badge type="success" text="INPUT" />
 
-to do
+Entrada do sinal que seleciona o endereço da memória ROM a ser acessado durante um desvio.
 
-:::
+- Tipo: `std_logic`
+
+### `source_program` <Badge type="success" text="INPUT" />
+
+Entrada do valor do PC.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `source_immediate` <Badge type="success" text="INPUT" />
+
+Entrada do valor do Imediato.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `source_register` <Badge type="success" text="INPUT" />
+
+Entrada do valor vindo do banco de registradores.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do valor atual do endereço para desvio.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 

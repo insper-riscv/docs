@@ -10,19 +10,48 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
 
 ## Interface de portas
 
-::: danger TO DO
+### `select_function` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do vetor de seleção da operação a ser realizada na ULA.
 
-:::
+- Tipo: `std_logic_vector`
+- Largura: variável `4`
+
+### `source_1` <Badge type="success" text="INPUT" />
+
+Entrada primária de dados.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `source_2` <Badge type="success" text="INPUT" />
+
+Entrada secundária de dados.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `overflow` <Badge type="danger" text="OUTPUT" />
+
+Saída de sinal que indica se houve overflow.
+
+- Tipo: `std_logic`
+
+### `destination` <Badge type="danger" text="OUTPUT" />
+
+Saída do vetor de dados.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Diagrama RTL
 

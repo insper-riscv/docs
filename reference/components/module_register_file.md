@@ -10,11 +10,19 @@ outline: 2
 
 ## Interface genérica
 
-::: danger TO DO
+### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
 
-Work in progress.
+Largura dos vetores de dados.
 
-:::
+- Tipo: `natural`
+- Padrão: `XLEN`
+
+### `ADDRESS_WIDTH` <Badge type="neutral" text="GENERIC" />
+
+Largura dos endereços do banco de registradores.
+
+- Tipo: `natural`
+- Padrão: `REGISTER_WIDTH`
 
 ## Interface de portas
 
@@ -24,11 +32,59 @@ Entrada do sinal de clock.
 
 - Tipo: `std_logic`
 
-::: danger TO DO
+### `clear` <Badge type="success" text="INPUT" />
 
-Work in progress.
+Entrada do sinal que limpa o(s) dado(s) do componente.
 
-:::
+- Tipo: `std_logic`
+
+### `enable` <Badge type="success" text="INPUT" />
+
+Entrada do sinal que ativa o componente.
+
+- Tipo: `std_logic`
+
+### `select_destination` <Badge type="success" text="INPUT" />
+
+Entrada do endereço do registrador de destino.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(ADDRESS_WIDTH - 1) downto 0`
+
+### `select_source_1` <Badge type="success" text="INPUT" />
+
+Entrada do endereço do registrador primário.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(ADDRESS_WIDTH - 1) downto 0`
+
+### `select_source_1` <Badge type="success" text="INPUT" />
+
+Entrada do endereço do registrador secundário.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(ADDRESS_WIDTH - 1) downto 0`
+
+### `data_destination` <Badge type="success" text="INPUT" />
+
+Entrada do valor do registrador de destino.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `data_source_1` <Badge type="danger" text="OUTPUT" />
+
+Saída do valor do registrador primário.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
+
+### `data_source_2` <Badge type="danger" text="OUTPUT" />
+
+Saída do valor do registrador secundário.
+
+- Tipo: `std_logic_vector`
+- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 
