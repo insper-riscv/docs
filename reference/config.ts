@@ -8,9 +8,25 @@ export const sidebar : DefaultTheme.Sidebar = {
       link: '/reference/components/',
       collapsed: false,
       items: [
-        /* {
+        {
           text: 'Estruturas de dados',
-        }, {
+          collapsed: true,
+          items: [
+            {
+              text: 'Pacote CPU',
+              link: '/reference/components/package_cpu.md',
+            }, {
+              text: 'Pacote Módulos',
+              link: '/reference/components/package_modules.md',
+            }, {
+              text: 'Pacote RV32I',
+              link: '/reference/components/package_rv32i.md',
+            }, {
+              text: 'Pacote Genéricos',
+              link: '/reference/components/package_generics.md',
+            },
+          ],
+        },/*  {
           text: 'Constantes Globais',
         },  */{
           text: 'Top Level',

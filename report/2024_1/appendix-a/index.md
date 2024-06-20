@@ -269,7 +269,7 @@ constant NULL_SIGNALS_MEM_WB : t_SIGNALS_MEM_WB := (
 );
 ```
 
-### Sinais de forward de desvio <Badge text="WORK.CPU.t_SIGNALS_MEM_WB"/>
+### Sinais de forward de desvio <Badge text="WORK.CPU.t_FORWARD_BRANCH"/>
 
 Este é o registro dos controles e sinais de forwarding do comparador de desvio
 no estágio Decodifica Instrução. A partir do seguinte registro é possível
@@ -277,21 +277,17 @@ controlar os seguintes aspectos, respecitvamente:
 
 - `select_source_1`: Seleciona a origem do vetor `data_source_1` na unidade de comparação de desvio, respectivamente, entre o arquivo de registradores, o forward do destino do estágio Executa, o forward do destino do estágio Acessa a Memória e o forward do destino do estágio Escrita de Retorno;
 - `select_source_2`: Seleciona a origem do vetor `data_source_2` na unidade de comparação de desvio, respectivamente, entre o arquivo de registradores, o forward do destino do estágio Executa, o forward do destino do estágio Acessa a Memória e o forward do destino do estágio Escrita de Retorno;
-- `source_ex`: Vetor de destino do estágio Executa;
 - `source_mem`: Vetor de destino do estágio Acessa a Memória;
-- `source_wb`: Vetor de destino do estágio Escrita de Retorno.
 
 ```vhdl
 type t_FORWARD_BRANCH is record
     select_source_1 : std_logic_vector(1 downto 0);
     select_source_2 : std_logic_vector(1 downto 0);
-    source_ex       : WORK.RV32I.t_DATA;
     source_mem      : WORK.RV32I.t_DATA;
-    source_wb       : WORK.RV32I.t_DATA;
 end record;
 ```
 
-### Sinais do forward de execução <Badge text="WORK.CPU.t_SIGNALS_MEM_WB"/>
+### Sinais do forward de execução <Badge text="WORK.CPU.t_FORWARD_EXECUTION"/>
 
 Este é o registro dos controles e sinais de forwarding da unidade lógica e aritmética
 no estágio Executa. A partir do seguinte registro é possível
