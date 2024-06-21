@@ -1,11 +1,11 @@
-## Pacote WORK.RV32I {style="font-size: 2em;"}
+## Estruturas de Dados - Pacote WORK.RV32I {style="font-size: 2em;"}
 
 Para simplificar as operações realizadas pelo processador, foram definidas funções
 que determinam o tipo de instrução sendo executada, o imediato correspondente a
 essa instrução, assim como a fragmentação da instrução em vetores menore de dados,
 cada um com sua própria utilidade.
 
-### Função de Fragmentação <Badge text="to_instruction"/>
+### Função de Fragmentação <Badge text="WORK.RV32I.to_instruction"/>
 
 Função que separa a instrução em diferentes vetores de dados.
 
@@ -33,33 +33,33 @@ function to_instruction(
     end function;
 ```
 
-### Função de Tipagem <Badge text="to_instruction_type"/>
+### Função de Tipagem <Badge text="WORK.RV32I.to_instruction_type"/>
 
 Função que define o tipo da instrução sendo executada com base no opcode. Os tipos
 possíveis são:
 
-- `Tipo R` <Badge type="neutral" text="INSTRUCTION_R_TYPE"/>
+- `Tipo R` <Badge type="neutral" text="WORK.RV32I.INSTRUCTION_R_TYPE"/>
 
 Instruções que realizam operações entre registradores.
 
-- `Tipo I` <Badge type="neutral" text="INSTRUCTION_I_TYPE"/>
+- `Tipo I` <Badge type="neutral" text="WORK.RV32I.INSTRUCTION_I_TYPE"/>
 
 Instruções que realizam operações usando valor do imediato (presente na instrução), e instruções 
 de carregar valores da memória RAM no banco de registradores.
 
-- `Tipo S` <Badge type="neutral" text="INSTRUCTION_S_TYPE"/>
+- `Tipo S` <Badge type="neutral" text="WORK.RV32I.INSTRUCTION_S_TYPE"/>
 
 Instruções que realizam operações de armazenamento valores na memória RAM.
 
-- `Tipo B` <Badge type="neutral" text="INSTRUCTION_S_TYPE"/>
+- `Tipo B` <Badge type="neutral" text="WORK.RV32I.INSTRUCTION_S_TYPE"/>
 
 Instruções que realizam desvio.
 
-- `Tipo U` <Badge type="neutral" text="INSTRUCTION_S_TYPE"/>
+- `Tipo U` <Badge type="neutral" text="WORK.RV32I.INSTRUCTION_S_TYPE"/>
 
 Instruções que carregam valores direto da instrução nos bits mais significativos de um registrador.
 
-- `Tipo J` <Badge type="neutral" text="INSTRUCTION_S_TYPE"/>
+- `Tipo J` <Badge type="neutral" text="WORK.RV32I.INSTRUCTION_S_TYPE"/>
 
 Instrução JAL.
 
@@ -100,7 +100,7 @@ function to_instruction_type(
     end function;
 ```
 
-### Função de Imediato Tipo I <Badge text="to_immediate_i"/>
+### Função de Imediato Tipo I <Badge text="WORK.RV32I.to_immediate_i"/>
 
 Função responsável por gerar o Imediato para instruções do tipo I.
 
@@ -117,7 +117,7 @@ begin
 end function;
 ```
 
-### Função de Imediato Tipo S <Badge text="to_immediate_s"/>
+### Função de Imediato Tipo S <Badge text="WORK.RV32I.to_immediate_s"/>
 
 Função responsável por gerar o Imediato para instruções do tipo S.
 
@@ -134,7 +134,7 @@ begin
 end function;
 ```
 
-### Função de Imediato Tipo B <Badge text="to_immediate_b"/>
+### Função de Imediato Tipo B <Badge text="WORK.RV32I.to_immediate_b"/>
 
 Função responsável por gerar o Imediato para instruções do tipo B.
 
@@ -151,7 +151,7 @@ begin
 end function;
 ```
 
-### Função de Imediato Tipo U <Badge text="to_immediate_u"/>
+### Função de Imediato Tipo U <Badge text="WORK.RV32I.to_immediate_u"/>
 
 Função responsável por gerar o Imediato para instruções do tipo U.
 
@@ -168,7 +168,7 @@ begin
 end function;
 ```
 
-### Função de Imediato Tipo J <Badge text="to_immediate_j"/>
+### Função de Imediato Tipo J <Badge text="WORK.RV32I.to_immediate_j"/>
 
 Função responsável por gerar o Imediato para instruções do tipo J.
 

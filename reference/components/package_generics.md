@@ -1,9 +1,9 @@
-## Pacote WORK.GENERICS {style="font-size: 2em;"}
+## Estruturas de Dados - Pacote WORK.GENERICS {style="font-size: 2em;"}
 
 Para simplificar as operações realizadas pelo processador, foram definidas funções
 de operações comumente usadas em vetores de dados.
 
-### Função de inversão <Badge text="reverse_vector"/>
+### Função de inversão <Badge text="WORK.GENERICS.reverse_vector"/>
 
 Essa é a função que realiza a inversão de um vetor.
 
@@ -19,7 +19,7 @@ function reverse_vector (l: in std_logic_vector) return std_logic_vector is
     end function;
 ```
 
-### Função de OU reduzido <Badge text="reduce_or"/>
+### Função de OU reduzido <Badge text="WORK.GENERICS.reduce_or"/>
 
 ::: danger TO DO
 
@@ -43,7 +43,7 @@ function reduce_or (l : std_logic_vector) return std_logic is
     end function;
 ```
 
-### Função de E reduzido <Badge text="reduce_and"/>
+### Função de E reduzido <Badge text="WORK.GENERICS.reduce_and"/>
 
 ::: danger TO DO
 
@@ -67,7 +67,7 @@ function reduce_and (l : std_logic_vector) return std_logic is
     end function;
 ```
 
-### Função de igualdade <Badge text="is_equal"/>
+### Função de igualdade <Badge text="WORK.GENERICS.is_equal"/>
 
 Função que compara um vetor de dados dinâmico com um vetor de dados estático.
 
@@ -92,7 +92,7 @@ function is_equal (l : std_logic_vector; r : std_logic_vector) return std_logic 
     end function;
 ```
 
-### Função de igualdade dinâmica <Badge text="is_equal"/>
+### Função de igualdade dinâmica <Badge text="WORK.GENERICS.is_equal"/>
 
 Função que compara dois vetores de dados dinâmicos.
 

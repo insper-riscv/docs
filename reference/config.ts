@@ -26,9 +26,25 @@ export const sidebar : DefaultTheme.Sidebar = {
               link: '/reference/components/package_generics.md',
             },
           ],
-        },/*  {
+        },  {
           text: 'Constantes Globais',
-        },  */{
+          collapsed: true,
+          items: [
+            {
+              text: 'Pacote CPU',
+              link: '/reference/components/package_cpu_constants.md',
+            }, {
+              text: 'Pacote Módulos',
+              link: '/reference/components/package_modules_constants.md',
+            }, {
+              text: 'Pacote RV32I',
+              link: '/reference/components/package_rv32i_constants.md',
+            }, {
+              text: 'Pacote Genéricos',
+              link: '/reference/components/package_generics_constants.md',
+            },
+          ],
+        },  {
           text: 'Top Level',
           link: '/reference/components/',
         }, {

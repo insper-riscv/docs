@@ -1,4 +1,4 @@
-## Pacote WORK.CPU {style="font-size: 2em;"}
+## Estruturas de Dados - Pacote WORK.CPU {style="font-size: 2em;"}
 
 Para a topologia, um conjunto de registros foi criado para definir o fluxo de
 dados em alto nível. Isso possibilita simplificar a implementação de pipelining
