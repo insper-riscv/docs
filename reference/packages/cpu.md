@@ -385,25 +385,8 @@ end record;
 
 ## Relação entre os registros
 
-```mermaid
-erDiagram
-t_SIGNALS_ID_EX {
-    t_CONTROL_EX control_ex
-    t_CONTROL_MEM control_mem
-    t_CONTROL_WB control_wb
-}
-t_SIGNALS_EX_MEM {
-    t_CONTROL_MEM control_mem
-    t_CONTROL_WB control_wb
-}
-t_SIGNALS_MEM_WB {
-    t_CONTROL_WB control_wb
-}
+<pan-container>
 
-t_SIGNALS_ID_EX }|--|| t_CONTROL_EX : ""
-t_SIGNALS_ID_EX }|--|| t_CONTROL_MEM : ""
-t_SIGNALS_ID_EX }|--|| t_CONTROL_WB : ""
-t_SIGNALS_EX_MEM }|--|| t_CONTROL_MEM : ""
-t_SIGNALS_EX_MEM }|--|| t_CONTROL_WB : ""
-t_SIGNALS_MEM_WB }|--|| t_CONTROL_WB : ""
-```
+![](/images/reference/packages/cpu_records_er.mermaid.drawio.svg){class="dark-invert"}
+
+</pan-container>
