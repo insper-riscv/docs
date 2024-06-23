@@ -222,7 +222,7 @@ WORK.RV32I.OPCODE_JAL;
 
 ### Segmentos do `FUNCT3`
 
-Conforme especificado no [Conjunto de Instruções](/docs/reference/isa/), o segmento `FUNCT3` da instrução é definido conforme segue:
+Conforme especificado no [Conjunto de Instruções](/reference/isa/), o segmento `FUNCT3` da instrução é definido conforme segue:
 
 #### Interface
 ```vhdl
