@@ -97,7 +97,7 @@ Work in progress.
 
 <pan-container>
 
-![Diagrama de RTL do Decodifica Instrução](/images/reference/components/cpu_stage_id_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Decodifica Instrução](/images/reference/entities/cpu_stage_id_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -112,7 +112,7 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Decodifica Instrução](/images/reference/components/tb_stage_id_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Decodifica Instrução](/images/reference/entities/tb_stage_id_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
 

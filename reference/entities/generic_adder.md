@@ -82,7 +82,7 @@ ADDER : entity WORK.GENERIC_ADDER
 
 <pan-container>
 
-![Diagrama de RTL do somador](/images/reference/components/generic_adder_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do somador](/images/reference/entities/generic_adder_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -94,6 +94,6 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do somador](/images/reference/components/tb_generic_adder_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do somador](/images/reference/entities/tb_generic_adder_case_1.svg){.w-full .dark-invert}
 
 </pan-container>

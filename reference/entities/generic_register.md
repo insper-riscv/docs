@@ -72,7 +72,7 @@ REGISTER_1 : entity WORK.GENERIC_REGISTER
 
 <pan-container>
 
-![Diagrama de RTL do Registrador](/images/reference/components/generic_register_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Registrador](/images/reference/entities/generic_register_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -84,6 +84,6 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Registrador](/images/reference/components/tb_generic_register_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Registrador](/images/reference/entities/tb_generic_register_case_1.svg){.w-full .dark-invert}
 
 </pan-container>

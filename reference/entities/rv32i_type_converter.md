@@ -44,7 +44,7 @@ Saída do vetor de dados.
 
 <pan-container>
 
-![Diagrama de RTL do Conversor de Tipo](/images/reference/components/rv32i_type_converter_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Conversor de Tipo](/images/reference/entities/rv32i_type_converter_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -59,7 +59,7 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Controlador da ULA](/images/reference/components/tb_rv32i_type_converter_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Controlador da ULA](/images/reference/entities/tb_rv32i_type_converter_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
 

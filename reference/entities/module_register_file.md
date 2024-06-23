@@ -98,7 +98,7 @@ Work in progress.
 
 <pan-container>
 
-![Diagrama de RTL do Arquivo de Registradores](/images/reference/components/module_register_file_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Arquivo de Registradores](/images/reference/entities/module_register_file_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -113,7 +113,7 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Arquivo de Registradores](/images/reference/components/tb_module_register_file_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Arquivo de Registradores](/images/reference/entities/tb_module_register_file_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
 

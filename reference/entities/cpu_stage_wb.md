@@ -73,7 +73,7 @@ Work in progress.
 
 <pan-container>
 
-![Diagrama de RTL do Escreve o Retorno](/images/reference/components/stage_wb_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Escreve o Retorno](/images/reference/entities/stage_wb_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -88,7 +88,7 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Escreve o Retorno](/images/reference/components/tb_stage_wb_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Escreve o Retorno](/images/reference/entities/tb_stage_wb_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
 

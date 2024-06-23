@@ -45,7 +45,7 @@ Saída do vetor de dados com sinal estendido.
 
 <pan-container>
 
-![Diagrama de RTL do Extensor de Sinal](/images/reference/components/generic_signal_extender_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Extensor de Sinal](/images/reference/entities/generic_signal_extender_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -60,7 +60,7 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Extensor de Sinal](/images/reference/components/tb_generic_signal_extender_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Extensor de Sinal](/images/reference/entities/tb_generic_signal_extender_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
 

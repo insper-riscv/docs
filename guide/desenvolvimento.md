@@ -182,10 +182,10 @@ demanda do cliente em relação aos testes de stress.
 
 Os componentes cobertos são:
 
-- [Generic Adder](/reference/components/generic_adder)
-- [Generic Mux 2x1](/reference/components/generic_mux_2x1)
-- [Generic Mux 4x1](/reference/components/generic_mux_4x1)
-- [Generic Register](/reference/components/generic_register)
+- [Generic Adder](/reference/entities/generic_adder)
+- [Generic Mux 2x1](/reference/entities/generic_mux_2x1)
+- [Generic Mux 4x1](/reference/entities/generic_mux_4x1)
+- [Generic Register](/reference/entities/generic_register)
 
 
 ### Síntese e RTL
@@ -193,7 +193,7 @@ Os componentes cobertos são:
 Uma maneira de validar os componentes é por meio do RTL. Através da ferramenta Yosis e do NetlistSVG é possível executar
 a síntese e o RTL, que pode ser visto na figura abaixo para o componente `Generic Adder`:
 
-![RTL view from somador](/images/reference/components/generic_adder_netlist.svg){.w-full .dark-invert}
+![RTL view from somador](/images/reference/entities/generic_adder_netlist.svg){.w-full .dark-invert}
 
 ### Waveform
 
@@ -201,7 +201,7 @@ Para visualizar o comportamento dos componentes, foi utilizado WaveDrom, que é 
 diagramas com base de tempo. Um exemplo de waveform para o componente `Generic Adder` é mostrado abaixo:
 
 
-![Waveform from caso de teste 1 do somador](/images/reference/components/tb_generic_adder_case_1.svg){.w-full .dark-invert}
+![Waveform from caso de teste 1 do somador](/images/reference/entities/tb_generic_adder_case_1.svg){.w-full .dark-invert}
 
 ### Testes do Quartus
 

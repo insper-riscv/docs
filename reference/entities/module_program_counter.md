@@ -69,7 +69,7 @@ Work in progress.
 
 <pan-container>
 
-![Diagrama de RTL do Contador de Programa](/images/reference/components/module_program_counter_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Contador de Programa](/images/reference/entities/module_program_counter_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -84,7 +84,7 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 da Controlador da Unidade de Execução/images/reference/components/tb_module_program_counter_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 da Controlador da Unidade de Execução/images/reference/entities/tb_module_program_counter_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
 

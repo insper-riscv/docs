@@ -100,7 +100,7 @@ Work in progress.
 
 <pan-container>
 
-![Diagrama de RTL da Unidade de Execução](/images/reference/components/module_execution_unit_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL da Unidade de Execução](/images/reference/entities/module_execution_unit_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -115,7 +115,7 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 da Controlador da Unidade de Execução/images/reference/components/tb_module_execution_unit_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 da Controlador da Unidade de Execução/images/reference/entities/tb_module_execution_unit_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
 

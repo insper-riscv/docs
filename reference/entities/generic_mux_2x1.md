@@ -65,7 +65,7 @@ MUX_1 : entity WORK.GENERIC_MUX_2X1
 
 <pan-container>
 
-![Diagrama de RTL do mux 2x1](/images/reference/components/generic_mux_2x1_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do mux 2x1](/images/reference/entities/generic_mux_2x1_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -77,6 +77,6 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Flip Flop](/images/reference/components/tb_generic_mux_2x1_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Flip Flop](/images/reference/entities/tb_generic_mux_2x1_case_1.svg){.w-full .dark-invert}
 
 </pan-container>

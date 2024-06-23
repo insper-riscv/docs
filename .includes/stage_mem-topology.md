@@ -1,1 +1,1 @@
-![Topologia do Acessa a Memória](/images/reference/components/stage_mem.drawio.svg){.w-full .dark-invert}
+![Topologia do Acessa a Memória](/images/reference/entities/stage_mem.drawio.svg){.w-full .dark-invert}

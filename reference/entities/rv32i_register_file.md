@@ -78,7 +78,7 @@ Saída de valor de registrador secundária.
 
 <pan-container>
 
-![Diagrama de RTL do arquivo de registradores](/images/reference/components/rv32i_register_file_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do arquivo de registradores](/images/reference/entities/rv32i_register_file_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -90,6 +90,6 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-<img src="/images/reference/components/tb_rv32i_register_file_case_1.svg" alt="Caso de teste 1 do Arquivo de Registradores" style="width: 100%; background-color: white;">
+<img src="/images/reference/entities/tb_rv32i_register_file_case_1.svg" alt="Caso de teste 1 do Arquivo de Registradores" style="width: 100%; background-color: white;">
 
 </pan-container>

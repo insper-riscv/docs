@@ -18,7 +18,7 @@ outline: 2
 
 <pan-container>
 
-![](/images/reference/components/top_level_pipeline.drawio.svg){.w-full .dark-invert}
+![](/images/reference/entities/top_level_pipeline.drawio.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -42,7 +42,7 @@ Work in progress.
 
 <pan-container>
 
-![Diagrama de RTL do Top Level](/images/reference/components/top_level_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL do Top Level](/images/reference/entities/top_level_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -54,6 +54,6 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Top Level](/images/reference/components/tb_top_level_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Top Level](/images/reference/entities/tb_top_level_case_1.svg){.w-full .dark-invert}
 
 </pan-container>

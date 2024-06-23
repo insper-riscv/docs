@@ -86,7 +86,7 @@ ROM : entity WORK.GENERIC_ROM
 
 <pan-container>
 
-![Diagrama de RTL da ROM](/images/reference/components/generic_rom_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL da ROM](/images/reference/entities/generic_rom_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
@@ -98,6 +98,6 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 da ROM](/images/reference/components/tb_generic_rom_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 da ROM](/images/reference/entities/tb_generic_rom_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
