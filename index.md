@@ -32,8 +32,8 @@ features:
     details: Plataforma de desenvolvimento para placas FPGA Intel inclusa programável por servidor JTAG.
     link: https://www.intel.com.br/content/www/br/pt/products/details/fpga/development-tools/quartus-prime.html
     linkText: Saiba mais
-  - title: Pytest e Cocotb
-    details: Framework de testes unitários e de integração
+  - title: Cocotb e Pytest
+    details: Framework de testes unitários e de integração para linguagens HDL
     link: https://cocotb.org/
     linkText: Saiba mais
   - title: GHDL + Yosys
@@ -41,7 +41,7 @@ features:
     link: https://ghdl.github.io/ghdl/about.html
     linkText: Saiba mais
   - title: Wavedrom e Netlistsvg
-    details: Ferramentas de visualização
+    details: Ferramentas de visualização de síntese e simulação
     link: https://wavedrom.com/
     linkText: Saiba mais
 

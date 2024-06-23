@@ -55,7 +55,7 @@ Saída de dados.
 ```vhdl
 CONSTANT_ADDER : entity WORK.GENERIC_ADDER
     generic map (
-        DATA_WIDTH_0     => 32,
+        DATA_WIDTH_      => 32,
         DEFAULT_SOURCE_2 => 1
     )
     port map (
@@ -69,7 +69,7 @@ CONSTANT_ADDER : entity WORK.GENERIC_ADDER
 ```vhdl
 ADDER : entity WORK.GENERIC_ADDER
     generic map (
-        DATA_WIDTH_0 => 32
+        DATA_WIDTH => 32
     )
     port map (
         source_1    => signal_source_1,

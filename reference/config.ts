@@ -4,52 +4,31 @@ import { type DefaultTheme } from 'vitepress'
 export const sidebar : DefaultTheme.Sidebar = {
   '/reference/': [
     {
-      text: 'Organização',
-      link: '/reference/components/',
+      text: 'Pacotes',
       collapsed: false,
       items: [
         {
-          text: 'Estruturas de dados',
-          collapsed: true,
-          items: [
-            {
-              text: 'Pacote CPU',
-              link: '/reference/components/package_cpu.md',
-            }, {
-              text: 'Pacote Módulos',
-              link: '/reference/components/package_modules.md',
-            }, {
-              text: 'Pacote RV32I',
-              link: '/reference/components/package_rv32i.md',
-            }, {
-              text: 'Pacote Genéricos',
-              link: '/reference/components/package_generics.md',
-            },
-          ],
-        },  {
-          text: 'Constantes Globais',
-          collapsed: true,
-          items: [
-            {
-              text: 'Pacote CPU',
-              link: '/reference/components/package_cpu_constants.md',
-            }, {
-              text: 'Pacote Módulos',
-              link: '/reference/components/package_modules_constants.md',
-            }, {
-              text: 'Pacote RV32I',
-              link: '/reference/components/package_rv32i_constants.md',
-            }, {
-              text: 'Pacote Genéricos',
-              link: '/reference/components/package_generics_constants.md',
-            },
-          ],
-        },  {
+          text: 'CPU',
+          link: '/reference/packages/cpu.md',
+        }, {
+          text: 'RV32I',
+          link: '/reference/packages/rv32i.md',
+        }, {
+          text: 'Genéricos',
+          link: '/reference/packages/generics.md',
+        },
+      ]
+    }, {
+      text: 'Entidades',
+      link: '/reference/entities/',
+      collapsed: false,
+      items: [
+        {
           text: 'Top Level',
-          link: '/reference/components/',
+          link: '/reference/entities/',
         }, {
           text: 'CPU',
-          link: '/reference/components/cpu_top_level',
+          link: '/reference/entities/cpu_top_level',
           collapsed: true,
           items: [
             {
@@ -58,30 +37,30 @@ export const sidebar : DefaultTheme.Sidebar = {
               items: [
                 {
                   text: 'IF - Busca Instrução',
-                  link: '/reference/components/cpu_stage_if',
+                  link: '/reference/entities/cpu_stage_if',
                 }, {
                   text: 'ID - Decodifica Instrução',
-                  link: '/reference/components/cpu_stage_id',
+                  link: '/reference/entities/cpu_stage_id',
                 }, {
                   text: 'EX - Executa',
-                  link: '/reference/components/cpu_stage_ex',
+                  link: '/reference/entities/cpu_stage_ex',
                 }, {
                   text: 'MEM - Acessa à Memória',
-                  link: '/reference/components/cpu_stage_mem',
+                  link: '/reference/entities/cpu_stage_mem',
                 }, {
                   text: 'WB - Escreve o Retorno',
-                  link: '/reference/components/cpu_stage_wb',
+                  link: '/reference/entities/cpu_stage_wb',
                 },
               ]
             }, {
               text: 'Unidade de Encaminhamento de Dados para Execução',
-              link: '/reference/components/cpu_execution_forwarding_unit',
+              link: '/reference/entities/cpu_execution_forwarding_unit',
             }, {
               text: 'Unidade de Encaminhamento de Dados para Desvio',
-              link: '/reference/components/cpu_branch_forwarding_unit',
+              link: '/reference/entities/cpu_branch_forwarding_unit',
             }, {
               text: 'Unidade de Controle de Hazards',
-              link: '/reference/components/cpu_hazard_control_unit',
+              link: '/reference/entities/cpu_hazard_control_unit',
             },
           ],
         },  {
@@ -90,31 +69,31 @@ export const sidebar : DefaultTheme.Sidebar = {
           items: [
             {
               text: 'Contador de Programa',
-              link: '/reference/components/module_program_counter',
+              link: '/reference/entities/module_program_counter',
             }, {
               text: 'Unidade de Controle',
-              link: '/reference/components/module_control_unit',
+              link: '/reference/entities/module_control_unit',
             }, {
               text: 'Arquivo de Registradores',
-              link: '/reference/components/module_register_file',
+              link: '/reference/entities/module_register_file',
             }, {
               text: 'Controlador da Unidade de Execução',
-              link: '/reference/components/module_execution_unit_controller',
+              link: '/reference/entities/module_execution_unit_controller',
             }, {
               text: 'Unidade de Execução',
-              link: '/reference/components/module_execution_unit',
+              link: '/reference/entities/module_execution_unit',
             }, {
               text: 'Escrita de Retorno',
-              link: '/reference/components/module_write_back',
+              link: '/reference/entities/module_write_back',
             }, {
               text: 'Comparação para Desvio',
-              link: '/reference/components/module_branch_compare_unit',
+              link: '/reference/entities/module_branch_compare_unit',
             }, {
               text: 'Desvio',
-              link: '/reference/components/module_branch_unit',
+              link: '/reference/entities/module_branch_unit',
             }, {
               text: 'Interface de Memória',
-              link: '/reference/components/module_memory_interface',
+              link: '/reference/entities/module_memory_interface',
             },
           ],
         }, {
@@ -123,19 +102,19 @@ export const sidebar : DefaultTheme.Sidebar = {
           items: [
             {
               text: 'Arquivo de Registradores',
-              link: '/reference/components/rv32i_register_file',
+              link: '/reference/entities/rv32i_register_file',
             }, {
               text: 'Unidade Lógica e Aritmética',
-              link: '/reference/components/rv32i_alu',
+              link: '/reference/entities/rv32i_alu',
             }, {
               text: 'Conversor de Tipo',
-              link: '/reference/components/rv32i_type_converter',
+              link: '/reference/entities/rv32i_type_converter',
             }, {
               text: 'Deslocador da ULA',
-              link: '/reference/components/rv32i_alu_shifter',
+              link: '/reference/entities/rv32i_alu_shifter',
             }, {
               text: 'Controlador de Desvio',
-              link: '/reference/components/rv32i_branch_controller',
+              link: '/reference/entities/rv32i_branch_controller',
             },
           ],
         }, {
@@ -144,37 +123,37 @@ export const sidebar : DefaultTheme.Sidebar = {
           items: [
             {
               text: 'Carry Lookahead',
-              link: '/reference/components/generic_carry_lookahead',
+              link: '/reference/entities/generic_carry_lookahead',
             }, {
               text: 'Somador',
-              link: '/reference/components/generic_adder',
+              link: '/reference/entities/generic_adder',
             }, {
               text: 'Comparador',
-              link: '/reference/components/generic_comparator',
+              link: '/reference/entities/generic_comparator',
             }, {
               text: 'Multiplexador 2x1',
-              link: '/reference/components/generic_mux_2x1',
+              link: '/reference/entities/generic_mux_2x1',
             }, {
               text: 'Multiplexador 4x1',
-              link: '/reference/components/generic_mux_4x1',
+              link: '/reference/entities/generic_mux_4x1',
             }, {
               text: 'Multiplexador 32x1',
-              link: '/reference/components/generic_mux_32x1',
+              link: '/reference/entities/generic_mux_32x1',
             }, {
               text: 'RAM',
-              link: '/reference/components/generic_ram',
+              link: '/reference/entities/generic_ram',
             }, {
               text: 'Registrador',
-              link: '/reference/components/generic_register',
+              link: '/reference/entities/generic_register',
             }, {
               text: 'ROM',
-              link: '/reference/components/generic_rom',
+              link: '/reference/entities/generic_rom',
             }, {
               text: 'ROM Quartus',
-              link: '/reference/components/generic_rom_quartus',
+              link: '/reference/entities/generic_rom_quartus',
             }, {
               text: 'Extensor de Sinal',
-              link: '/reference/components/generic_signal_extender',
+              link: '/reference/entities/generic_signal_extender',
             },
           ],
         },
