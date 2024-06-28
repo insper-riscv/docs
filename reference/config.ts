@@ -33,7 +33,7 @@ export const sidebar : DefaultTheme.Sidebar = {
           items: [
             {
               text: 'Pipeline',
-              collapsed: false,
+              collapsed: true,
               items: [
                 {
                   text: 'IF - Busca Instrução',
@@ -77,13 +77,13 @@ export const sidebar : DefaultTheme.Sidebar = {
               text: 'Arquivo de Registradores',
               link: '/reference/entities/module_register_file',
             }, {
-              text: 'Controlador da Unidade de Execução',
+              text: 'Controlador da Execução',
               link: '/reference/entities/module_execution_unit_controller',
             }, {
-              text: 'Unidade de Execução',
+              text: 'Execução',
               link: '/reference/entities/module_execution_unit',
             }, {
-              text: 'Escrita de Retorno',
+              text: 'Seletor de Escrita',
               link: '/reference/entities/module_write_back',
             }, {
               text: 'Comparação para Desvio',
