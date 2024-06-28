@@ -86,6 +86,8 @@ onMounted(() => {
         beforeWheel: (event) => !event.altKey && !fullscreen.value,
     })
 
+    setTimeout(() => zoomFit(), 32)
+
     instance.on('zoom', (event) => {
         const transform = event.getTransform()
 
@@ -118,6 +120,12 @@ onMounted(() => {
 <style scoped>
 .diagram.custom-block {
     padding: 0;
+    position: relative;
+
+    &:hover .custom-block--footer {
+        opacity: 1;
+        visibility: visible;
+    }
 
     &:fullscreen {
         background-color: var(--vp-c-bg);
@@ -128,7 +136,7 @@ onMounted(() => {
         --y: 0;
         --scale: 1;
         --size: calc(var(--scale) * 100px);
-        --pattern: transparent 90deg, var(--vp-c-border) 0;
+        --pattern: transparent 90deg, var(--vp-c-gutter) 0;
         max-height: calc(100vh - 42px);
         overflow: hidden;
         cursor: grab;
@@ -152,12 +160,21 @@ onMounted(() => {
     }
 
     .custom-block--footer {
-        padding-top: 8px;
+        width: 100%;
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        background-color: var(--vp-c-bg-soft);
         display: flex;
         gap: 8px;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        transition: opacity 256ms;
 
         &.fullscreen {
             padding: 8px 16px 0 16px;
+            position: static;
         }
     }
 
