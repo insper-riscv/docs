@@ -94,38 +94,38 @@ members24_1:
         link: https://github.com/TiagoSeixas2103
 
 members24_2:
-  - name: Desenvolvedor 1
+  - name: Arthur Barreto
     title: Desenvolvedor
-    avatar: /docs/images/members/PLACEHOLDER
+    avatar: /docs/images/members/arthur-martins-de-souza-barreto.jpg
     links:
       - icon: linkedin
-        link: https://www.linkedin.com/in/PLACEHOLDER
+        link: https://www.linkedin.com/in/arthur-martins-de-souza-barreto/
       - icon: github
-        link: https://github.com/PLACEHOLDER
-  - name: Desenvolvedor 2
+        link: https://github.com/Arthur-Barreto
+  - name: Eduardo Barros
     title: Desenvolvedor
-    avatar: /docs/images/members/PLACEHOLDER
+    avatar: /docs/images/members/eduardosmb.jpg
     links:
       - icon: linkedin
-        link: https://www.linkedin.com/in/PLACEHOLDER
+        link: https://www.linkedin.com/in/eduardosmb/
       - icon: github
-        link: https://github.com/PLACEHOLDER
-  - name: Desenvolvedor 3
+        link: https://github.com/eduardosmb
+  - name: Rodrigo Patelli
     title: Desenvolvedor
-    avatar: /docs/images/members/PLACEHOLDER
+    avatar: /docs/images/members/rodrigo-anciães-patelli.jpg
     links:
       - icon: linkedin
-        link: https://www.linkedin.com/in/PLACEHOLDER
+        link: https://www.linkedin.com/in/rodrigo-anciães-patelli/
       - icon: github
-        link: https://github.com/PLACEHOLDER
-  - name: Desenvolvedor 4
+        link: https://github.com/RodrigoAnciaes
+  - name: Vitor Assis
     title: Desenvolvedor
-    avatar: /docs/images/members/PLACEHOLDER
+    avatar: /docs/images/members/victorlga.jpg
     links:
       - icon: linkedin
-        link: https://www.linkedin.com/in/PLACEHOLDER
+        link: https://www.linkedin.com/in/victorlga/
       - icon: github
-        link: https://github.com/PLACEHOLDER
+        link: https://github.com/victorlga
 
 ---
 
@@ -141,12 +141,12 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 ## Equipe Capstone 2024.2
 
-> [!info] EM BREVE
-> Equipe em seleção.
+[<Badge type="tip" text="Relatório ⧉"/>](https://insper-riscv.github.io/docs/report/2024_2/)
 
-<!-- <VPTeamMembers :members="$frontmatter.members24_2" size="small" /> -->
+<VPTeamMembers :members="$frontmatter.members24_2" size="small" />
 
 ## Equipe Capstone 2024.1
+
 [<Badge type="tip" text="Saiba mais ⧉"/>](https://www.insper.edu.br/noticias/alunos-desenvolvem-processador-para-o-ministerio-da-ciencia-tecnologia-e-inovacao/)
 [<Badge type="tip" text="Relatório ⧉"/>](https://insper-riscv.github.io/docs/report/2024_1/)
 
