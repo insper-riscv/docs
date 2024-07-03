@@ -55,15 +55,22 @@ Saída do sinal que ativa desvio.
 
 ## Usagem
 
-::: warning ATENÇÃO!
-
-to do
-
-:::
+```vhdl
+CONTROLLER: entity WORK.RV32I_BRANCH_CONTROLLER
+    port map (
+        select_function => select_function(2 downto 0),
+        flag_sign_1     => sign_1,
+        flag_sign_2     => sign_2,
+        flag_equal      => flag_equal,
+        flag_less       => flag_less,
+        flag_greather   => flag_greather,
+        destination     => flag_branch
+    );
+```
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -71,7 +78,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 

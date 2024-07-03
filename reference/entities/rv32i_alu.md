@@ -53,6 +53,19 @@ Saída do vetor de dados.
 - Tipo: `std_logic_vector`
 - Largura: variável `(DATA_WIDTH - 1) downto 0`
 
+## Usagem
+
+```vhdl
+ALU : entity WORK.RV32I_ALU
+    port map (
+        select_function => select_function,
+        source_1        => alu_source_1,
+        source_2        => alu_source_2,
+        overflow        => overflow,
+        destination     => destination
+    );
+```
+
 ## Diagrama RTL
 
 <pan-container :max-zoom="8">

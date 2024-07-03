@@ -50,15 +50,21 @@ para o registrador secundário da etapa ID.
 
 ## Usagem
 
-::: warning ATENÇÃO!
-
-to do
-
-:::
+```vhdl
+BRANCH_FORWARDING_UNIT : entity WORK.CPU_BRANCH_FORWARDING_UNIT
+    port map (
+        stage_id_select_source_1     => signals_id_ex.select_source_1,
+        stage_id_select_source_2     => signals_id_ex.select_source_2,
+        stage_mem_enable_destination => signals_mem_wb.control_wb.enable_destination,
+        stage_mem_select_destination => signals_mem_wb.select_destination,
+        select_source_1              => stage_id_forward_branch.select_source_1,
+        select_source_2              => stage_id_forward_branch.select_source_2
+    );
+```
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -66,7 +72,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 

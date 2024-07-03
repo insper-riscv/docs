@@ -59,11 +59,17 @@ Saída do valor atual do PC.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+PROGRAM_COUNTER : entity WORK.MODULE_PROGRAM_COUNTER(RV32I)
+    port map (
+        clock        => clock,
+        clear        => clear,
+        enable       => enable, -- AND NOT(source.enable_stall),
+        selector     => source.select_source,
+        source       => address_jump,
+        destination  => address_program
+    );
+```
 
 ## Diagrama RTL
 

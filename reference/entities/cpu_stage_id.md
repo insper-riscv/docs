@@ -87,11 +87,25 @@ Saída de registro que contém os dados vindos da etapa ID do pipeline.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+INSTRUCTION_DECODE : entity WORK.CPU_STAGE_ID(RV32I)
+    generic map (
+        QUARTUS_MEMORY => QUARTUS_MEMORY
+    )
+    port map (
+        clock                => clock,
+        clear                => NOT flag_stall,
+        enable               => NOT (flag_hazzard OR (flag_stall AND control_if.enable_stall)),
+        enable_destination   => stage_wb_enable_destination,
+        select_destination   => stage_wb_select_destination,
+        data_destination     => stage_wb_data_destination,
+        forward              => stage_id_forward_branch,
+        source               => signals_if_id,
+        address_jump         => stage_id_address_jump,
+        control_if           => control_if,
+        signals_ex           => signals_id_ex
+    );
+```
 
 ## Diagrama RTL
 

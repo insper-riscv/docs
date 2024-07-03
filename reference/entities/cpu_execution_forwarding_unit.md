@@ -60,7 +60,7 @@ ou da etapa WB para o registrador secundário da etapa EX.
 
 - Tipo: `std_logic`
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -68,15 +68,23 @@ to do
 
 ## Usagem
 
-::: warning ATENÇÃO!
-
-to do
-
-:::
+```vhdl
+EXECUTION_FORWARDING_UNIT : entity WORK.CPU_EXECUTION_FORWARDING_UNIT(RV32I)
+    port map (
+        stage_ex_select_source_1     => stage_ex_select_source_1,
+        stage_ex_select_source_2     => stage_ex_select_source_2,
+        stage_mem_enable_destination => signals_mem_wb.control_wb.enable_destination,
+        stage_mem_select_destination => signals_mem_wb.select_destination,
+        stage_wb_enable_destination  => stage_wb_enable_destination,
+        stage_wb_select_destination  => stage_wb_select_destination,
+        select_source_1              => stage_ex_forward_execution.select_source_1,
+        select_source_2              => stage_ex_forward_execution.select_source_2
+    );
+```
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -84,7 +92,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 

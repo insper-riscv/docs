@@ -40,6 +40,29 @@ Saída do vetor de dados.
 - Tipo: `std_logic_vector`
 - Largura: variável `(DATA_WIDTH - 1) downto 0`
 
+## Usagem
+
+### Saída da RAM
+
+```vhdl
+DATA_IN : entity WORK.RV32I_TYPE_CONVERTER
+    port map (
+        select_type => select_function,
+        source      => source_data_in,
+        destination => destination_data_in
+    );
+```
+
+### Entrada da RAM
+```vhdl
+DATA_OUT : entity WORK.RV32I_TYPE_CONVERTER
+    port map (
+        select_type => "1" & select_function(1 downto 0), -- Aways zero-extended
+        source      => source_data_out,
+        destination => destination_data_out
+    );
+```
+
 ## Diagrama RTL
 
 <pan-container>

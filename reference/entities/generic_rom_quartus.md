@@ -73,7 +73,7 @@ endereçado um valor fora da largura mapeada assume sinal lógico baixo `"0...0"
 
 ## Usagem
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -81,7 +81,7 @@ to do
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -89,7 +89,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 

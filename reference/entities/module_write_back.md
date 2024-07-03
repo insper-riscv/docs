@@ -48,11 +48,15 @@ Saída do valor do registrador destino.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+WRITE_BACK : entity WORK.MODULE_WRITE_BACK(RV32I)
+    port map (
+        selector         => source_0.control_wb.select_destination,
+        source_execution => source_0.data_destination,
+        source_memory    => source_0.data_memory,
+        destination      => destination
+    );
+```
 
 ## Diagrama RTL
 

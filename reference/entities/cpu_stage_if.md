@@ -48,11 +48,17 @@ Saída de dados que contém o endereço da próxima instrução a ser executada.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+INSTRUCTION_FETCH : entity WORK.CPU_STAGE_IF(RV32I)
+    port map (
+        clock           => clock,
+        clear           => clear,
+        enable          => NOT (flag_hazzard OR (flag_stall AND control_if.enable_stall)),
+        source          => control_if,
+        address_jump    => stage_id_address_jump,
+        address_program => signals_if_id.address_program
+    );
+```
 
 ## Diagrama RTL
 

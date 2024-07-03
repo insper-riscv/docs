@@ -66,15 +66,24 @@ Saída de sinal que ativa stall.
 
 ## Usagem
 
-::: warning ATENÇÃO!
-
-to do
-
-:::
+```vhdl
+CONTROL_HAZZARD_UNIT : entity WORK.CPU_HAZZARD_CONTROL_UNIT
+    port map (
+        stage_id_select_source_1     => signals_id_ex.select_source_1,
+        stage_id_select_source_2     => signals_id_ex.select_source_2,
+        stage_ex_enable_read         => signals_ex_mem.control_mem.enable_read,
+        stage_ex_enable_destination  => signals_ex_mem.control_wb.enable_destination,
+        stage_ex_select_destination  => signals_ex_mem.select_destination,
+        stage_mem_enable_read        => stage_mem_control_memory.enable_read,
+        stage_mem_select_destination => signals_mem_wb.select_destination,
+        stall_branch                 => flag_stall,
+        destination                  => flag_hazzard
+    );
+```
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -82,7 +91,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 

@@ -53,11 +53,19 @@ Saída de sinal que indica se o valor da entrada primária é maior do que o val
 
 ## Usagem
 
-::: danger TO DO
-
-Usagem
-
-:::
+```vhdl
+COMPARATOR : entity WORK.GENERIC_COMPARATOR
+    generic map (
+        DATA_WIDTH => WORK.RV32I.XLEN
+    )
+    port map (
+        source_1      => forward_source_1,
+        source_2      => forward_source_2,
+        flag_equal    => flag_equal,
+        flag_less     => flag_less,
+        flag_greather => flag_greather
+    );
+```
 
 ## Diagrama RTL
 

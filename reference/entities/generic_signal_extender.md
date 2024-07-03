@@ -40,6 +40,37 @@ Saída do vetor de dados com sinal estendido.
 - Tipo: `std_logic_vector`
 - Largura: `(DESTINATION_WIDTH - 1) downto 0`
 
+## Usagem
+
+### Extensão de Byte
+
+```vhdl
+EXTEND_BYTE: entity WORK.GENERIC_SIGNAL_EXTENDER
+    generic map (
+        SOURCE_WIDTH      => 8,
+        DESTINATION_WIDTH => WORK.RV32I.XLEN
+    )
+    port map (
+        enable_unsigned => select_type(2),
+        source          => source(7 downto 0),
+        destination     => destination_byte
+    );
+```
+
+### Extensão de Meia Palavra
+
+```vhdl
+EXTEND_HALFWORD: entity WORK.GENERIC_SIGNAL_EXTENDER
+    generic map (
+        SOURCE_WIDTH      => 16,
+        DESTINATION_WIDTH => WORK.RV32I.XLEN
+    )
+    port map (
+        enable_unsigned => select_type(2),
+        source          => source(15 downto 0),
+        destination     => destination_halfword
+    );
+```
 
 ## Diagrama RTL
 

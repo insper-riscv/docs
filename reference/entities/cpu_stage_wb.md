@@ -63,11 +63,18 @@ Saída do valor a ser armazenado no registrador de destino.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+WRITE_BACK : entity WORK.CPU_STAGE_WB(RV32I)
+    port map (
+        clock              => clock,
+        clear              => clear,
+        enable             => enable,
+        enable_destination => stage_wb_enable_destination,
+        select_destination => stage_wb_select_destination,
+        source             => signals_mem_wb,
+        destination        => stage_wb_data_destination
+    );
+```
 
 ## Diagrama RTL
 

@@ -72,11 +72,18 @@ Saída de registro que contém os sinais de controle da etapa WB.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+MODULE_CONTROL_UNIT : entity WORK.MODULE_CONTROL_UNIT(RV32I)
+    port map (
+        clear       => '0',
+        instruction => source_0.data_instruction,
+        immediate   => data_immediate,
+        control_id  => control_id,
+        control_ex  => signals_ex.control_ex,
+        control_mem => signals_ex.control_mem,
+        control_wb  => signals_ex.control_wb
+);
+```
 
 ## Diagrama RTL
 

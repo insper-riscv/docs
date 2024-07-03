@@ -88,11 +88,20 @@ Saída do valor do registrador secundário.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+MODULE_REGISTER_FILE : entity WORK.MODULE_REGISTER_FILE(RV32I)
+    port map (
+    clock              => clock,
+    clear              => '0',
+    enable             => enable_destination,
+    select_destination => select_destination,
+    data_destination   => data_destination,
+    select_source_1    => WORK.RV32I.to_INSTRUCTION(source_0.data_instruction).select_source_1,
+    select_source_2    => WORK.RV32I.to_INSTRUCTION(source_0.data_instruction).select_source_2,
+    data_source_1      => data_source_1,
+    data_source_2      => data_source_2
+);
+```
 
 ## Diagrama RTL
 

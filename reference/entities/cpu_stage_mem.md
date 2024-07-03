@@ -75,11 +75,20 @@ Saída de registro que contém os dados vindos da etapa MEM do pipeline.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+MEMORY_ACCESS : entity WORK.CPU_STAGE_MEM(RV32I)
+    port map (
+        clock           => clock,
+        clear           => clear,
+        enable          => enable,
+        source          => signals_ex_mem,
+        data_memory_in  => data_memory_in,
+        control_memory  => stage_mem_control_memory,
+        address_memory  => address_memory,
+        data_memory_out => data_memory_out,
+        destination     => signals_mem_wb
+    );
+```
 
 ## Diagrama RTL
 

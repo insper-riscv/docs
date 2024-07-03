@@ -90,11 +90,19 @@ Saída da ULA.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+MODULE_EXECUTION_UNIT : entity WORK.MODULE_EXECUTION_UNIT(RV32I)
+    port map (
+        select_source_1  => source_0.control_ex.select_source_1,
+        select_source_2  => source_0.control_ex.select_source_2,
+        select_function  => select_function,
+        address_program  => source_0.address_program,
+        source_1         => data_source_1,
+        source_2         => data_source_2,
+        immediate        => source_0.data_immediate,
+        destination      => destination.data_destination
+    );
+```
 
 ## Diagrama RTL
 

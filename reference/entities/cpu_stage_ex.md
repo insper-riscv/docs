@@ -69,11 +69,19 @@ Endereço do registrador secundário do banco de registradores.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+EXECUTE : entity WORK.CPU_STAGE_EX(RV32I)
+    port map (
+        clock           => clock,
+        clear           => clear OR (flag_hazzard OR (flag_stall AND control_if.enable_stall)),
+        enable          => enable,
+        forward         => stage_ex_forward_execution,
+        source          => signals_id_ex,
+        select_source_1 => stage_ex_select_source_1,
+        select_source_2 => stage_ex_select_source_2,
+        destination     => signals_ex_mem
+    );
+```
 
 ## Diagrama RTL
 

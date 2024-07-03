@@ -63,15 +63,24 @@ Saída de dados que contém o valor a ser armazenado na memória RAM.
 
 ## Usagem
 
-::: warning ATENÇÃO!
-
-to do
-
-:::
+```vhdl
+MEM_INTERFACE: entity WORK.MODULE_MEMORY_INTERFACE(RV32I)
+    generic map (
+        FUNCTION_WIDTH => 3,
+        DATA_WIDTH     => 32
+    )
+    port map (
+        select_function      => source_0.funct_3,
+        source_data_in       => data_memory_in,
+        source_data_out      => source_0.data_source_2,
+        destination_data_in  => destination.data_memory,
+        destination_data_out => data_memory_out
+    );
+```
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -79,7 +88,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 

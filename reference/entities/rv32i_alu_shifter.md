@@ -56,15 +56,22 @@ Saída do vetor de dados.
 
 ## Usagem
 
-::: warning ATENÇÃO!
-
-to do
-
-:::
+```vhdl
+SHIFTER : entity WORK.RV32I_ALU_SHIFTER
+    generic map (
+        DATA_WIDTH  => 32
+    )
+    port map (
+        select_function => select_function,
+        shamt           => source_2(4 downto 0),
+        source          => source_1,
+        destination     => shift
+    );
+```
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -72,7 +79,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 

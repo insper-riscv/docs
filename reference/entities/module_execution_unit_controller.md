@@ -56,11 +56,15 @@ Saída do seletor da ULA.
 
 ## Usagem
 
-::: danger TO DO
-
-Work in progress.
-
-:::
+```vhdl
+MODULE_EXECUTION_UNIT_CONTROLLER : entity WORK.MODULE_EXECUTION_UNIT_CONTROLLER(RV32I)
+    port map (
+        opcode      => source_0.opcode,
+        funct_3     => source_0.funct_3,
+        funct_7     => source_0.funct_7,
+        destination => select_function
+    );
+```
 
 ## Diagrama RTL
 

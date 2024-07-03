@@ -74,6 +74,23 @@ Saída de valor de registrador secundária.
 
 - tipo: `std_logic_vector((DATA_WIDTH - 1) downto 0)`
 
+## Usagem
+
+```vhdl
+REGISTER_FILE : entity WORK.RV32I_REGISTER_FILE
+    port map (
+        clock               => clock,
+        clear               => clear,
+        enable              => enable,
+        address_destination => select_destination,
+        address_source_1    => select_source_1,
+        address_source_2    => select_source_2,
+        data_destination    => data_destination,
+        data_source_1       => data_source_1,
+        data_source_2       => data_source_2
+);
+```
+
 ## Diagrama RTL
 
 <pan-container>

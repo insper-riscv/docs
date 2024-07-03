@@ -74,15 +74,22 @@ Saída de sinal que ativa desvio.
 
 ## Usagem
 
-::: warning ATENÇÃO!
-
-to do
-
-:::
+```vhdl
+BRANCH_COMPARE_UNIT: entity WORK.MODULE_BRANCH_COMPARE_UNIT(RV32I)
+    port map (
+        enable             => control_id.enable_branch,
+        select_function    => "0" & WORK.RV32I.to_INSTRUCTION(source_0.data_instruction).funct_3,
+        source_1           => data_source_1,
+        source_2           => data_source_2,
+        forward            => forward,
+        data_source_1      => forward_source_1,
+        destination        => enable_branch
+    );
+```
 
 ## Diagrama RTL
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
@@ -90,7 +97,7 @@ to do
 
 ## Casos de teste
 
-::: warning ATENÇÃO!
+::: danger TO DO
 
 to do
 
