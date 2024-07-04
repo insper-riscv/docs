@@ -10,7 +10,7 @@ outline: 2
 
 <pan-container>
 
-![alt text](/public/images/reference/report_components/cpu_top_level.drawio.svg){.w-full .dark-invert}
+![alt text](/images/reference/entities/cpu_top_level_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
 </pan-container>
 

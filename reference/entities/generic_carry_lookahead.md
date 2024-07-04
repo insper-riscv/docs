@@ -4,54 +4,64 @@ outline: 2
 
 # _Carry Lookahead_
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_CARRY_LOOKAHEAD.vhd" target="blank"><Badge type="tip" text="GENERIC_CARRY_LOOKAHEAD.vhd &boxbox;" /></a>
+
+Auxilia a implementação do [CLA](https://en.wikipedia.org/wiki/Carry-lookahead_adder) para ganhos de performance em circuitos somadores como o [Somador Genérico](/reference/entities/generic_adder) e a [Unidade de Lógica Aritmética](/reference/entities/rv32i_alu). 
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_carry_lookahead.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![Topologia do Carry Lookahead](/images/reference/entities/generic_carry_lookahead_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
+</pan-container>
 
-Largura dos vetores de dados.
+## Interface
 
-- Tipo: `natural`
-- Padrão: `8`
+```vhdl
+entity GENERIC_CARRY_LOOKAHEAD is
 
-## Interface de portas
+    generic(
+        DATA_WIDTH : natural := 8
+    );
 
-::: danger TO DO
+    port (
+        carry_in        : in  std_logic                                   := '0';
+        carry_generate  : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
+        carry_propagate : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
+        carry_out       : out std_logic_vector((DATA_WIDTH - 1) downto 0)
+    );
 
-to do
-
-:::
+end entity;
+```
 
 ## Usagem
 
 ```vhdl
 CARRY_LOOKAHEAD : entity WORK.GENERIC_CARRY_LOOKAHEAD
     generic map (
-        DATA_WIDTH => DATA_WIDTH - 1
+        DATA_WIDTH => 8
     )
     port map(
-        carry_in        => '0',
-        carry_generate  => source_and((DATA_WIDTH - 2) downto 0),
-        carry_propagate => half_add((DATA_WIDTH - 2) downto 0),
+        carry_in        => carry_in,
+        carry_generate  => source_and,
+        carry_propagate => source_xor,
         carry_out       => carry_out
     );
 ```
 
 ## Diagrama RTL
 
-::: danger TO DO
+<pan-container>
 
-to do
+![Diagrama RTL do Carry Lookahead](/images/reference/entities/generic_carry_lookahead_netlist.svg){.w-full .dark-invert}
 
-:::
+</pan-container>
 
 ## Casos de teste
 
-::: danger TO DO
+::: warning ATENÇÃO!
 
-to do
+To do
 
 :::
