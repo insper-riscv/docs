@@ -1,11 +1,11 @@
 <template>
 
 <div class="diagram custom-block">
-    <div class="panzoom-wrap" ref="wrap" :class="{fullscreen, 'show-grid': props.grid && (fullscreen || zoom > 1)}" :style="gridStyle">
+    <div ref="wrap" :style="gridStyle" :class="{fullscreen, 'show-grid': props.grid && (fullscreen || zoom > 1)}" class="panzoom-wrap">
         <slot />
     </div>
 
-    <div class="custom-block--footer" :class="{fullscreen}">
+    <div :class="{fullscreen}" class="custom-block--footer">
         <p class="custom-block--info">
             zoom: <i><code>alt+scroll</code></i>
         </p>
@@ -18,8 +18,9 @@
             :step="zoomStep"
             @input="zoomAbs($event.target.value)">
         </div>
-        <button class="VPBadge info" @click="zoomFit" aria-label="Zoom fit">&#x26F6;</button>
-        <button class="VPBadge info" @click="enterFullscreen" aria-label="Fullscreen">&#x1F5D6;</button>
+        <button @click="zoomFit" aria-label="Zoom fit" class="VPBadge info">&#x26F6;</button>
+        <a v-if="editUrl !== null" :href="editUrl" target="blank" rel="noopener" aria-label="Edit" style="text-decoration: none;" class="VPBadge info">&#x270E;</a>
+        <button @click="enterFullscreen" aria-label="Fullscreen" class="VPBadge info">&#x1F5D6;</button>
     </div>
 </div>
 
@@ -47,6 +48,7 @@ const props = defineProps({
 const zoomStep = (props.maxZoom - 1) / 32
 const wrap = ref(null)
 const zoom = ref(1)
+const editUrl = ref(null)
 const fullscreen = ref(false)
 let instance = null
 const gridStyle = ref({
@@ -77,7 +79,13 @@ onMounted(() => {
     if (wrap.value.children?.length !== 1)
         return
 
-    instance = panZoom(wrap.value.querySelector(props.selector), {
+    const target = wrap.value.querySelector(props.selector)
+
+    if (target.tagName === 'IMG' && target.src.endsWith(".drawio.svg")) {
+        editUrl.value = `https://app.diagrams.net/#U${target.src}`
+    }
+
+    instance = panZoom(target, {
         minZoom: 1,
         maxZoom: props.maxZoom,
         bounds: true,
