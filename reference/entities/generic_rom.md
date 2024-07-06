@@ -4,83 +4,96 @@ outline: 2
 
 # ROM
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_ROM.vhd" target="blank"><Badge type="tip" text="GENERIC_ROM.vhd &boxbox;" /></a>
+
+Memória de apenas leitura.
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_rom.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![alt text](/images/reference/entities/generic_rom_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
+</pan-container>
 
-Largura dos vetores de dados `source` e `destination`.
+## Interface
 
-- Tipo: `natural`
-- Padrão: `8`
+```vhdl
+entity GENERIC_ROM is
 
-### `ADDRESS_WIDTH` <Badge type="neutral" text="GENERIC" />
+    generic (
+        DATA_WIDTH        : natural := 8;
+        ADDRESS_WIDTH     : natural := 8;
+        ADDRESSABLE_WIDTH : natural := 7;
+        INIT_FILE         : string  := "../data/mif/generic_rom_dummy.mif"
+    );
 
-Largura do vetor da entrada `address`.
+    port (
+        clock       : in  std_logic := '1';
+        address     : in  std_logic_vector((ADDRESS_WIDTH - 1) downto 0);
+        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0)
+    );
 
-- Tipo: `natural`
-- Padrão: `8`
+end entity;
+```
 
-### `ADDRESSABLE_WIDTH` <Badge type="neutral" text="GENERIC" />
-
-Largura do vetor de endereçamento com mapeamento na memória.
-
-- Tipo: `natural`
-- Padrão: `7`
-
-::: warning ATENÇÃO!
-
-Deve ser menor ou igual a `ADDRESS_WIDTH`.
-
-:::
-
-## Interface de portas
-
-### `clock` <Badge type="success" text="INPUT" />
-
-Entrada do sinal de clock.
-
-- Tipo: `std_logic`
+- `DATA_WIDTH`: Largura dos vetores de dados.
+- `ADDRESS_WIDTH`: Largura do vetore de endereço.
+- `ADDRESSABLE_WIDTH`: Largura do vetor de endereço mapeado na memória.
+- `INIT_FILE`: Arquivo `.mif` de inicialização da memória.
+- `clock`: Sinal de clock.
+- `address`: Vetor de endereço.
+- `destination`: Vetor de dados endereçado.
 
 ::: warning ATENÇÃO!
 
-Apesar de o componente ROM ter clock na versão mais recente (2024_1), foi usada uma memória virtual para realização dos
-testes baseada em uma versão anterior da ROM que não tinha clock, que está representada no diagrama do TOP_LEVEL do projeto.
+`ADDRESSABLE_WIDTH` deve ser menor ou igual a `ADDRESS_WIDTH`.
 
 :::
-
-### `address` <Badge type="success" text="INPUT" />
-
-Entrada de endereço da memória.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(ADDRESS_WIDTH - 1) downto 0`
-
-### `destination` <Badge type="danger" text="OUTPUT" />
-
-Saída de dados assumindo valor armazenado no endereço em `address`. Caso seja
-endereçado um valor fora da largura mapeada assume sinal lógico baixo `"0...0"`
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 
+### ROM Genérica
+
+Implementação a partir de componentes genéricos e lógica a nível de registradores e portas lógicas.
+
 ```vhdl
-ROM : entity WORK.GENERIC_ROM
+ROM : entity WORK.GENERIC_ROM(RTL)
     generic map (
-        DATA_WIDTH_0      => 32;
-        ADDRESS_WIDTH     => 32;
-        ADDRESSABLE_WIDTH => 8
+        DATA_WIDTH        => 8;
+        ADDRESS_WIDTH     => 8;
+        ADDRESSABLE_WIDTH => 5;
+        INIT_FILE         => "path/to/init_file.mif"        
     )
     port map (
         source       => signal_source,
         destination  => signal_destination
     );
 ```
+
+### Propriedade Intelectual altsyncram Intel® FPGA
+
+[Saiba mais](https://www.intel.com/content/www/us/en/programmable/quartushelp/23.1/index.htm#hdl/mega/mega_file_altsynch_ram.htm).
+
+```vhdl
+ROM : entity WORK.GENERIC_ROM(SYN)
+    generic map (
+        DATA_WIDTH        => 8;
+        ADDRESS_WIDTH     => 8;
+        ADDRESSABLE_WIDTH => 5;
+        INIT_FILE         => "path/to/init_file.mif"
+    )
+    port map (
+        source       => signal_source,
+        destination  => signal_destination
+    );
+```
+
+::: warning ATENÇÃO!
+
+Para utilizar o IP é preciso incluir o arquivo `GENERIC_ROM_QUARTUS.vhd` ao invés do `GENERIC_ROM.vhd`. Esta usagem da entidade só está disponível para síntese dentro da plataforma de desenvolvimento para placas FPGA Intel® Quartus® Prime Lite
+
+:::
 
 ## Diagrama RTL
 
@@ -92,9 +105,9 @@ ROM : entity WORK.GENERIC_ROM
 
 ## Casos de teste
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_ROM_case_1" />
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_ROM.py" target="blank"><Badge type="tip" text="test_GENERIC_ROM.py &boxbox;" /></a>
 
-Forma de onda:
+### Caso 1 <Badge type="info" text="tb_GENERIC_ROM_case_1" />
 
 <pan-container :grid="false">
 

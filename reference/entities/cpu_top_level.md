@@ -60,7 +60,7 @@ end entity;
 ```
 
 - `clock`: Sinal de clock.
-- `clear`: Limpa o dado do componente.
+- `clear`: Limpa os dados da entidade.
 - `enable`: Habilita a entidade.
 - `data_program`: Dados da instrução da memória de programa.
 - `data_memory_in`: Dados de leitura da memória de dados.
@@ -148,6 +148,7 @@ To do.
 <a href="https://github.com/insper-riscv/core/blob/main/test/test_CPU_TOP_LEVEL.py" target="blank"><Badge type="tip" text="test_CPU_TOP_LEVEL.py &boxbox;" /></a>
 
 ### Caso de instruções `ADD` <Badge type="info" text="tb_cpu_top_level_add"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_ADD.S" target="blank"><Badge type="tip" text="testcase_ADD.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -156,6 +157,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `ADDI` <Badge type="info" text="tb_cpu_top_level_addi"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_ADDI.S" target="blank"><Badge type="tip" text="testcase_ADDI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -164,6 +166,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `AND` <Badge type="info" text="tb_cpu_top_level_and"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_AND.S" target="blank"><Badge type="tip" text="testcase_AND.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -172,6 +175,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `ANDI` <Badge type="info" text="tb_cpu_top_level_andi"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_ANDI.S" target="blank"><Badge type="tip" text="testcase_ANDI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -180,6 +184,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `AUIPC` <Badge type="info" text="tb_cpu_top_level_auipc"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_AUIPC.S" target="blank"><Badge type="tip" text="testcase_AUIPC.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -188,6 +193,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `BEQ` <Badge type="info" text="tb_cpu_top_level_beq"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_BEQ.S" target="blank"><Badge type="tip" text="testcase_BEQ.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -196,6 +202,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `BGE` <Badge type="info" text="tb_cpu_top_level_bge"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_BGE.S" target="blank"><Badge type="tip" text="testcase_BGE.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -204,6 +211,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `BGEU` <Badge type="info" text="tb_cpu_top_level_bgeu"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_BGEU.S" target="blank"><Badge type="tip" text="testcase_BGEU.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -212,6 +220,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `BLT` <Badge type="info" text="tb_cpu_top_level_blt"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_BLT.S" target="blank"><Badge type="tip" text="testcase_BLT.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -220,6 +229,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `BLTU` <Badge type="info" text="tb_cpu_top_level_bltu"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_BLTU.S" target="blank"><Badge type="tip" text="testcase_BLTU.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -228,6 +238,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `BNE` <Badge type="info" text="tb_cpu_top_level_bne"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_BNE.S" target="blank"><Badge type="tip" text="testcase_BNE.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -236,6 +247,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `JAL` <Badge type="info" text="tb_cpu_top_level_jal"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_JAL.S" target="blank"><Badge type="tip" text="testcase_JAL.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -244,6 +256,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `JALR` <Badge type="info" text="tb_cpu_top_level_jalr"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_JALR.S" target="blank"><Badge type="tip" text="testcase_JALR.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -252,6 +265,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `LB` <Badge type="info" text="tb_cpu_top_level_lb"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_LB.S" target="blank"><Badge type="tip" text="testcase_LB.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -260,6 +274,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `LBU` <Badge type="info" text="tb_cpu_top_level_lbu"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_LBU.S" target="blank"><Badge type="tip" text="testcase_LBU.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -268,6 +283,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `LH` <Badge type="info" text="tb_cpu_top_level_lh"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_LH.S" target="blank"><Badge type="tip" text="testcase_LH.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -276,6 +292,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `LHU` <Badge type="info" text="tb_cpu_top_level_lhu"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_LHU.S" target="blank"><Badge type="tip" text="testcase_LHU.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -284,6 +301,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `LUI` <Badge type="info" text="tb_cpu_top_level_lui"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_LUI.S" target="blank"><Badge type="tip" text="testcase_LUI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -292,6 +310,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `LW` <Badge type="info" text="tb_cpu_top_level_lw"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_LW.S" target="blank"><Badge type="tip" text="testcase_LW.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -300,6 +319,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `OR` <Badge type="info" text="tb_cpu_top_level_or"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_OR.S" target="blank"><Badge type="tip" text="testcase_OR.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -308,6 +328,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `ORI` <Badge type="info" text="tb_cpu_top_level_ori"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_ORI.S" target="blank"><Badge type="tip" text="testcase_ORI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -316,6 +337,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SB` <Badge type="info" text="tb_cpu_top_level_sb"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SB.S" target="blank"><Badge type="tip" text="testcase_SB.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -324,6 +346,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SH` <Badge type="info" text="tb_cpu_top_level_sh"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SH.S" target="blank"><Badge type="tip" text="testcase_SH.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -332,6 +355,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SLL` <Badge type="info" text="tb_cpu_top_level_sll"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SLL.S" target="blank"><Badge type="tip" text="testcase_SLL.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -340,6 +364,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SLLI` <Badge type="info" text="tb_cpu_top_level_slli"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SLLI.S" target="blank"><Badge type="tip" text="testcase_SLLI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -348,6 +373,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SLT` <Badge type="info" text="tb_cpu_top_level_slt"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SLT.S" target="blank"><Badge type="tip" text="testcase_SLT.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -356,6 +382,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SLTI` <Badge type="info" text="tb_cpu_top_level_slti"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SLTI.S" target="blank"><Badge type="tip" text="testcase_SLTI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -364,6 +391,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SLTIU` <Badge type="info" text="tb_cpu_top_level_sltiu"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SLTIU.S" target="blank"><Badge type="tip" text="testcase_SLTIU.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -372,6 +400,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SLTU` <Badge type="info" text="tb_cpu_top_level_sltu"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SLTU.S" target="blank"><Badge type="tip" text="testcase_SLTU.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -380,6 +409,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SRA` <Badge type="info" text="tb_cpu_top_level_sra"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SRA.S" target="blank"><Badge type="tip" text="testcase_SRA.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -388,6 +418,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SRAI` <Badge type="info" text="tb_cpu_top_level_srai"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SRAI.S" target="blank"><Badge type="tip" text="testcase_SRAI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -396,6 +427,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SRL` <Badge type="info" text="tb_cpu_top_level_srl"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SRL.S" target="blank"><Badge type="tip" text="testcase_SRL.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -404,6 +436,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SRLI` <Badge type="info" text="tb_cpu_top_level_srli"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SRLI.S" target="blank"><Badge type="tip" text="testcase_SRLI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -412,6 +445,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SUB` <Badge type="info" text="tb_cpu_top_level_sub"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SUB.S" target="blank"><Badge type="tip" text="testcase_SUB.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -420,6 +454,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `SW` <Badge type="info" text="tb_cpu_top_level_sw"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_SW.S" target="blank"><Badge type="tip" text="testcase_SW.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -428,6 +463,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `XOR` <Badge type="info" text="tb_cpu_top_level_xor"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_XOR.S" target="blank"><Badge type="tip" text="testcase_XOR.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 
@@ -436,6 +472,7 @@ To do.
 </pan-container>
 
 ### Caso de instruções `XORI` <Badge type="info" text="tb_cpu_top_level_xori"/>
+<a href="https://github.com/insper-riscv/core/blob/main/data/assembly/testcase_XORI.S" target="blank"><Badge type="tip" text="testcase_XORI.S &boxbox;" /></a>
 
 <pan-container :grid="false">
 

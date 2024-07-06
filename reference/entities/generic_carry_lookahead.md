@@ -35,6 +35,12 @@ entity GENERIC_CARRY_LOOKAHEAD is
 end entity;
 ```
 
+- `DATA_WIDTH`: Largura dos vetores de dados.
+- `carry_in`: Carry de entrada da soma.
+- `carry_generate`: Valores de carry de geração do CLA.
+- `carry_propagate`: Valores de carry de propagação do CLA.
+- `carry_out`: Carry de saída da soma.
+
 ## Usagem
 
 ```vhdl
@@ -59,6 +65,8 @@ CARRY_LOOKAHEAD : entity WORK.GENERIC_CARRY_LOOKAHEAD
 </pan-container>
 
 ## Casos de teste
+
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_CARRY_LOOKAHEAD.py" target="blank"><Badge type="tip" text="test_GENERIC_CARRY_LOOKAHEAD.py &boxbox;" /></a>
 
 ::: warning ATENÇÃO!
 

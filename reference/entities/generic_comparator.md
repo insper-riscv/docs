@@ -4,63 +4,55 @@ outline: 2
 
 # Comparador
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_COMPARATOR.vhd" target="blank"><Badge type="tip" text="GENERIC_COMPARATOR.vhd &boxbox;" /></a>
+
+Realiza operações aritmética de comparação entre dois inteiros positivos codificados em vetores booleanos.
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_comparator.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![alt text](/images/reference/entities/generic_comparator_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
+</pan-container>
 
-Largura dos vetores de dados.
+## Interface
 
-- Tipo: `natural`
-- Padrão: `8`
+```vhdl
+entity GENERIC_COMPARATOR is
 
-## Interface de portas
+    generic (
+        DATA_WIDTH : natural := 8
+    );
 
-### `source_1` <Badge type="success" text="INPUT" />
+    port (
+        source_1      : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
+        source_2      : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
+        flag_equal    : out std_logic;
+        flag_less     : out std_logic;
+        flag_greather : out std_logic
+    );
 
-Entrada primária de dados.
+end entity;
+```
 
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-
-### `source_2` <Badge type="success" text="INPUT" />
-
-Entrada secundária de dados.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-
-### `flag_equal` <Badge type="danger" text="OUTPUT" />
-
-Saída de sinal que indica se o valor da entrada primária é igual ao valor da entrada secundária.
-
-- Tipo: `std_logic`
-
-### `flag_less` <Badge type="danger" text="OUTPUT" />
-
-Saída de sinal que indica se o valor da entrada primária é menor do que o valor da entrada secundária.
-
-- Tipo: `std_logic`
-
-### `flag_greater` <Badge type="danger" text="OUTPUT" />
-
-Saída de sinal que indica se o valor da entrada primária é maior do que o valor da entrada secundária.
-
-- Tipo: `std_logic`
+- `DATA_WIDTH`: Largura dos vetores de dados.
+- `source_1`: Dados da comparação.
+- `source_2`: Dados da comparação.
+- `flag_equal`: Resultado da comparação `source_1 = source_2`.
+- `flag_less`: Resultado da comparação `source_1 < source_2`.
+- `flag_greather`: Resultado da comparação `source_1 > source_2`.
 
 ## Usagem
 
 ```vhdl
 COMPARATOR : entity WORK.GENERIC_COMPARATOR
     generic map (
-        DATA_WIDTH => WORK.RV32I.XLEN
+        DATA_WIDTH => 8
     )
     port map (
-        source_1      => forward_source_1,
-        source_2      => forward_source_2,
+        source_1      => signal_source_1,
+        source_2      => signal_source_2,
         flag_equal    => flag_equal,
         flag_less     => flag_less,
         flag_greather => flag_greather
@@ -71,30 +63,18 @@ COMPARATOR : entity WORK.GENERIC_COMPARATOR
 
 <pan-container>
 
-::: danger TO DO
-
-Diagrama RTL
-
-:::
+![Diagrama de RTL do comparador](/images/reference/entities/generic_comparator_netlist.svg){.w-full .dark-invert}
 
 </pan-container>
 
 ## Casos de teste
 
-::: danger TO DO
-
-Casos de teste
-
-:::
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_COMPARATOR.py" target="blank"><Badge type="tip" text="test_GENERIC_COMPARATOR.py &boxbox;" /></a>
 
 ### Caso 1 <Badge type="info" text="tb_GENERIC_COMPARATOR_case_1" />
 
 <pan-container>
-Forma de onda:
 
-::: danger TO DO
+![Forma de caso de teste 1 do comparador](/images/reference/entities/tb_generic_comparator_case_1.svg){.w-full .dark-invert}
 
-Forma de onda
-
-:::
 </pan-container>

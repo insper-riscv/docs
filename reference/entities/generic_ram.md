@@ -4,87 +4,58 @@ outline: 2
 
 # RAM
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_RAM.vhd" target="blank"><Badge type="tip" text="GENERIC_RAM.vhd &boxbox;" /></a>
+
+Memória de acesso randômico.
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_ram.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![alt text](/images/reference/entities/generic_ram_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
+</pan-container>
 
-Largura dos vetores de dados `source` e `destination`.
+## Interface
 
-- Tipo: `natural`
-- Padrão: `8`
+```vhdl
+entity GENERIC_RAM is
 
-### `ADDRESS_WIDTH` <Badge type="neutral" text="GENERIC" />
+    generic (
+        DATA_WIDTH        : natural := 8;
+        ADDRESS_WIDTH     : natural := 8;
+        ADDRESSABLE_WIDTH : natural := 7
+    );
 
-Largura do vetor da entrada `address`.
+    port (
+        clock        : in  std_logic;
+        enable       : in  std_logic;
+        enable_read  : in  std_logic;
+        enable_write : in  std_logic;
+        address      : in  std_logic_vector((ADDRESS_WIDTH - 1) downto 0);
+        source       : in  std_logic_vector((DATA_WIDTH - 1) downto 0);
+        destination  : out std_logic_vector((DATA_WIDTH - 1) downto 0)
+    );
 
-- Tipo: `natural`
-- Padrão: `8`
+end entity;
+```
 
-### `ADDRESSABLE_WIDTH` <Badge type="neutral" text="GENERIC" />
-
-Largura do vetor de endereçamento com mapeamento na memória.
-
-- Tipo: `natural`
-- Padrão: `7`
+- `DATA_WIDTH`: Largura dos vetores de dados.
+- `ADDRESS_WIDTH`: Largura do vetore de endereço.
+- `ADDRESSABLE_WIDTH`: Largura do vetor de endereço mapeado na memória.
+- `clock`: Sinal de clock.
+- `enable`: Habilita a entidade.
+- `enable_read`: Habilita leitura. Caso contrário, `destination` assume sinal de alta impedância.
+- `enable_write`: Habilita escrita.
+- `address`: Vetor de endereço.
+- `source`: Vetor de dados para escrita.
+- `destination`: Vetor de dados endereçado.
 
 ::: warning ATENÇÃO!
 
-Deve ser menor ou igual a `ADDRESS_WIDTH`.
+`ADDRESSABLE_WIDTH` deve ser menor ou igual a `ADDRESS_WIDTH`.
 
 :::
-
-## Interface de portas
-
-### `clock` <Badge type="success" text="INPUT" />
-
-Entrada do sinal de clock.
-
-- Tipo: `std_logic`
-
-### `enable` <Badge type="success" text="INPUT" />
-
-Entrada do sinal que ativa o componente.
-
-- Tipo: `std_logic`
-
-### `enable_read` <Badge type="success" text="INPUT" />
-
-Entrada do sinal habilitação da leitura da memória. Saída `destination` assume
-sinal de alta impedância caso `enable_read = '0'`.
-
-- Tipo: `std_logic`
-
-### `enable_write` <Badge type="success" text="INPUT" />
-
-Entrada do sinal habilitação da escrina da memória.
-
-- Tipo: `std_logic`
-
-### `address` <Badge type="success" text="INPUT" />
-
-Entrada de endereço da memória.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(ADDRESS_WIDTH - 1) downto 0`
-
-### `source` <Badge type="success" text="INPUT" />
-
-Entrada de dados.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-
-### `destination` <Badge type="danger" text="OUTPUT" />
-
-Saída de dados assumindo valor armazenado no endereço em `address`. Caso seja
-endereçado um valor fora da largura mapeada assume sinal lógico baixo `"0...0"`
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
 
 ## Usagem
 
@@ -111,13 +82,14 @@ RAM : entity WORK.GENERIC_RAM
 <pan-container>
 
 ![Diagrama de RTL da RAM](/images/reference/entities/generic_ram_netlist.svg){.w-full .dark-invert}
+
 </pan-container>
 
 ## Casos de teste
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_RAM_case_1" />
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_RAM.py" target="blank"><Badge type="tip" text="test_GENERIC_RAM.py &boxbox;" /></a>
 
-Forma de onda:
+### Caso 1 <Badge type="info" text="tb_GENERIC_RAM_case_1" />
 
 <pan-container :grid="false">
 

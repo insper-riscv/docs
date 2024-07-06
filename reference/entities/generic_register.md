@@ -4,53 +4,43 @@ outline: 2
 
 # Registrador
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_REGISTER.vhd" target="blank"><Badge type="tip" text="GENERIC_REGISTER.vhd &boxbox;" /></a>
+
+Registrador de uso geral.
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_register.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![alt text](/images/reference/entities/generic_register_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
+</pan-container>
 
-Largura dos vetores de dados `source` e `destination`.
+## Interface
 
-- Tipo: `natural`
-- Padrão: `8`
+```vhdl
+entity GENERIC_REGISTER is
 
-## Interface de portas
+    generic (
+        DATA_WIDTH : natural := 8
+    );
 
-### `clock` <Badge type="success" text="INPUT" />
+    port (
+        clock       : in  std_logic;
+        clear       : in  std_logic := '1';
+        enable      : in  std_logic := '0';
+        source      : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => 'X');
+        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0')
+    );
 
-Entrada do sinal de clock.
-
-- Tipo: `std_logic`
-
-### `clear` <Badge type="success" text="INPUT" />
-
-Entrada do sinal que limpa o valor armazenado no registrador.
-
-- Tipo: `std_logic`
-
-### `enable` <Badge type="success" text="INPUT" />
-
-Entrada do sinal que ativa o registrador.
-
-- Tipo: `std_logic`
-
-### `source` <Badge type="success" text="INPUT" />
-
-Entrada do vetor de dados.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-
-### `destination` <Badge type="danger" text="OUTPUT" />
-
-Saída do vetor de dados armazenado no registrador.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-- Padrão: `"0...0"`
+end entity;
+```
+- `DATA_WIDTH`: Largura dos vetores de dados.
+- `clock`: Sinal de clock.
+- `clear`: Limpa os dados da entidade.
+- `enable`: Habilita a entidade.
+- `source`: Vetor de dados para escrita.
+- `destination`: Vetor de dados regisrados.
 
 ## Usagem
 
@@ -78,9 +68,9 @@ REGISTER_1 : entity WORK.GENERIC_REGISTER
 
 ## Casos de teste
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_REGISTER_case_1" />
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_REGISTER.py" target="blank"><Badge type="tip" text="test_GENERIC_REGISTER.py &boxbox;" /></a>
 
-Forma de onda:
+### Caso 1 <Badge type="info" text="tb_GENERIC_REGISTER_case_1" />
 
 <pan-container :grid="false">
 

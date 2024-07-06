@@ -4,49 +4,42 @@ outline: 2
 
 # Somador
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_ADDER.vhd" target="blank"><Badge type="tip" text="GENERIC_ADDER.vhd &boxbox;" /></a>
+
+Realiza operação aritmética de soma entre dois inteiros codificados em vetores booleanos.
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_adder.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![alt text](/images/reference/entities/generic_adder_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
+</pan-container>
 
-Largura dos vetores de dados.
+## Interface
 
-- Tipo: `natural`
-- Padrão: `8`
+```vhdl
+entity GENERIC_ADDER is
 
-### `DEFAULT_SOURCE_2` <Badge type="neutral" text="GENERIC" />
+    generic (
+        DATA_WIDTH       : natural := 8;
+        DEFAULT_SOURCE_2 : integer := 1
+    );
 
-Valor padrão de incremento. Dispensa necessidade de atribuir entrada `source_2`.
+    port (
+        source_1    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
+        source_2    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := std_logic_vector(to_signed(DEFAULT_SOURCE_2, DATA_WIDTH));
+        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0)
+    );
 
-- Tipo: `integer`
-- Padrão: `1`
+end entity;
+```
 
-## Interface de portas
-
-### `source_1` <Badge type="success" text="INPUT" />
-
-Entrada primária de dados.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-
-### `source_2` <Badge type="success" text="INPUT" />
-
-Entrada secundária de dados.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-- Padrão: `to_signed(DEFAULT_SOURCE_2, DATA_WIDTH)`
-
-### `destination` <Badge type="danger" text="OUTPUT" />
-
-Saída de dados.
-
-- Tipo: `std_logic_vector`
-- Largura: `(DATA_WIDTH - 1) downto 0`
+- `DATA_WIDTH`: Largura dos vetores de dados.
+- `DEFAULT_SOURCE_2`: Dispensa necessidade de atribuir entrada `source_2`.
+- `source_1`: Dados da soma.
+- `source_2`: Dados da soma.
+- `destination`: Resultado da soma `source_1 + source_2`.
 
 ## Usagem
 
@@ -88,9 +81,9 @@ ADDER : entity WORK.GENERIC_ADDER
 
 ## Casos de teste
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_ADDER_case_1" />
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_ADDER.py" target="blank"><Badge type="tip" text="test_GENERIC_ADDER.py &boxbox;" /></a>
 
-Forma de onda:
+### Caso 1 <Badge type="info" text="tb_GENERIC_ADDER_case_1" />
 
 <pan-container :grid="false">
 

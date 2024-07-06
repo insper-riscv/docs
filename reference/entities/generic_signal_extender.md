@@ -4,71 +4,75 @@ outline: 2
 
 # Extensor de Sinal
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_SIGNAL_EXTENDER.vhd" target="blank"><Badge type="tip" text="GENERIC_SIGNAL_EXTENDER.vhd &boxbox;" /></a>
+
+Memória de apenas leitura.
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_signal_extender.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![alt text](/images/reference/entities/generic_signal_extender_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `SOURCE_WIDTH` <Badge type="neutral" text="GENERIC" />
-- Tipo: `natural`
-- Padrão: `4`
+</pan-container>
 
-### `DESTINATION_WIDTH` <Badge type="neutral" text="GENERIC" />
-- Tipo: `natural`
-- Padrão: `8`
+## Interface
 
-## Interface de portas
+```vhdl
+entity GENERIC_SIGNAL_EXTENDER is
 
-### `source` <Badge type="success" text="INPUT" />
+    generic (
+        SOURCE_WIDTH      : natural := 4;
+        DESTINATION_WIDTH : natural := 8
+    );
 
-Entrada do vetor de dados.
+    port (
+        source          : in  std_logic_vector((SOURCE_WIDTH - 1) downto 0);
+        enable_unsigned : in  std_logic := '0';
+        destination     : out std_logic_vector((DESTINATION_WIDTH - 1) downto 0)
+    );
 
-- Tipo: `std_logic_vector`
-- Largura: `(SOURCE_WIDTH - 1) downto 0`
+end entity;
+```
 
-### `enable_unsigned` <Badge type="success" text="INPUT" />
-
-Entrada do sinal que indica se o vetor de dados tem ou não sinal.
-
-- Tipo: `std_logic`
-
-### `destination` <Badge type="danger" text="OUTPUT" />
-
-Saída do vetor de dados com sinal estendido.
-
-- Tipo: `std_logic_vector`
-- Largura: `(DESTINATION_WIDTH - 1) downto 0`
+- `SOURCE_WIDTH`: Largura do vetor de entrada.
+- `DESTINATION_WIDTH`: Largura do vetor de saída.
+- `source`: Vetor de entrada.
+- `enable_unsigned`: Habilita extensão lógica ao invés de aritmética (sem sinal).
+- `destination`: Vetor de saída.
 
 ## Usagem
 
 ### Extensão de Byte
 
+Extende um sinal menor em outro maior. Para valores inteiros com sinal, preenche com o bit mais significativo a esquerda. Ex: de `10101010` para `1111111110101010` ou `0000000010101010` a depender de `enable_unsigned`.
+
 ```vhdl
-EXTEND_BYTE: entity WORK.GENERIC_SIGNAL_EXTENDER
+EXTEND_BYTE: entity WORK.GENERIC_SIGNAL_EXTENDER(LOWER_EXTEND)
     generic map (
         SOURCE_WIDTH      => 8,
-        DESTINATION_WIDTH => WORK.RV32I.XLEN
+        DESTINATION_WIDTH => 16
     )
     port map (
-        enable_unsigned => select_type(2),
-        source          => source(7 downto 0),
-        destination     => destination_byte
+        enable_unsigned => enable_signed,
+        source          => signal_source,
+        destination     => signal_destination
     );
 ```
 
-### Extensão de Meia Palavra
+### Extensão superior
+
+Extende um sinal menor em outro maior, preenchendo com sinal lógico baixo a direita. Ex: de `10101010` para `1010101000000000`.
 
 ```vhdl
-EXTEND_HALFWORD: entity WORK.GENERIC_SIGNAL_EXTENDER
+EXTEND_HALFWORD: entity WORK.GENERIC_SIGNAL_EXTENDER(LOGICAL_UPPER)
     generic map (
-        SOURCE_WIDTH      => 16,
-        DESTINATION_WIDTH => WORK.RV32I.XLEN
+        SOURCE_WIDTH      => 8,
+        DESTINATION_WIDTH => 16
     )
     port map (
-        enable_unsigned => select_type(2),
-        source          => source(15 downto 0),
-        destination     => destination_halfword
+        source          => signal_source,
+        destination     => signal_destination
     );
 ```
 
@@ -81,6 +85,8 @@ EXTEND_HALFWORD: entity WORK.GENERIC_SIGNAL_EXTENDER
 </pan-container>
 
 ## Casos de teste
+
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_SIGNAL_EXTENDER.py" target="blank"><Badge type="tip" text="test_GENERIC_SIGNAL_EXTENDER.py &boxbox;" /></a>
 
 ::: danger TO DO
 

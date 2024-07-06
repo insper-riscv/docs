@@ -4,54 +4,49 @@ outline: 2
 
 # Multiplexador 2x1
 
+<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_2X1.vhd" target="blank"><Badge type="tip" text="GENERIC_MUX_2X1.vhd &boxbox;" /></a>
+
+Atribui saída conforme entrada selecionada dentre duas.
+
 ## Topologia
 
-![alt text](/public/images/reference/report_components/generic_mux_2x1.drawio.svg)
+<pan-container>
 
-## Interface genérica
+![alt text](/images/reference/entities/generic_mux_2x1_topology.mermaid.drawio.svg){.w-full .dark-invert}
 
-### `DATA_WIDTH` <Badge type="neutral" text="GENERIC" />
+</pan-container>
 
-Largura dos vetores de dados.
+## Interface
 
-- Tipo: `natural`
-- Padrão: `8`
+```vhdl
+entity GENERIC_MUX_2X1 is
 
-## Interface de portas
+    generic (
+        DATA_WIDTH : natural := 8
+    );
 
-### `source_1` <Badge type="success" text="INPUT" />
+    port (
+        selector    : in  std_logic                                   := '0';
+        source_1    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
+        source_2    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
+        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0)
+    );
 
-Entrada primária de dados. `destination <= source_1` se `selector = '0'`.
+end entity;
+```
 
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-
-### `source_2` <Badge type="success" text="INPUT" />
-
-Entrada secundária de dados. `destination <= source_2` se `selector = '1'`.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
-
-### `selector` <Badge type="success" text="INPUT" />
-
-Seleção do vetor de saída de `destination`.
-
-- tipo: `std_logic`
-
-### `destination` <Badge type="danger" text="OUTPUT" />
-
-Saída de dados.
-
-- Tipo: `std_logic_vector`
-- Largura: variável `(DATA_WIDTH - 1) downto 0`
+- `DATA_WIDTH`: Largura dos vetores de dados.
+- `selector`: Seletor dos vetores de dados.
+- `source_1`: Vetor de dados.
+- `source_2`: Vetor de dados.
+- `destination`: Vetor de dados selecionado.
 
 ## Usagem
 
 ```vhdl
 MUX_1 : entity WORK.GENERIC_MUX_2X1
     generic map (
-        DATA_WIDTH_0 => 32
+        DATA_WIDTH_0 => 8
     )
     port map (
         source_1    => signal_source_1,
@@ -71,12 +66,12 @@ MUX_1 : entity WORK.GENERIC_MUX_2X1
 
 ## Casos de teste
 
-### Caso 1 <Badge type="info" text="tb_generic_mux_2x1_case_1" />
+<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_MUX_2X1.py" target="blank"><Badge type="tip" text="test_GENERIC_MUX_2X1.py &boxbox;" /></a>
 
-Forma de onda:
+### Caso 1 <Badge type="info" text="tb_GENERIC_MUX_2X1_case_1" />
 
-<pan-container :grid="false">
+<pan-container>
 
-![Forma de onda do caso de teste 1 do Flip Flop](/images/reference/entities/tb_generic_mux_2x1_case_1.svg){.w-full .dark-invert}
+![Forma de caso de teste 1 do comparador](/images/reference/entities/tb_generic_mux_2x1_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
