@@ -16,7 +16,7 @@ export const pt = defineConfig({
         link: '/guide/',
       }, {
         text: 'Referência',
-        link: '/reference/entities/',
+        link: '/reference/isa/',
       }, {
         text: 'Mais',
         items: [

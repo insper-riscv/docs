@@ -4,6 +4,17 @@ import { type DefaultTheme } from 'vitepress'
 export const sidebar : DefaultTheme.Sidebar = {
   '/reference/': [
     {
+      text: 'Especificação',
+      items: [
+        {
+          text: 'Conjunto de Instruções',
+          link: '/reference/isa/',
+        }, {
+          text: 'Pseudo-instruções',
+          link: '/reference/isa/pseudo',
+        },
+      ],
+    }, {
       text: 'Pacotes',
       collapsed: false,
       items: [
@@ -32,7 +43,7 @@ export const sidebar : DefaultTheme.Sidebar = {
           collapsed: true,
           items: [
             {
-              text: 'Pipeline',
+              text: 'Estágios',
               collapsed: true,
               items: [
                 {
@@ -149,9 +160,6 @@ export const sidebar : DefaultTheme.Sidebar = {
               text: 'ROM',
               link: '/reference/entities/generic_rom',
             }, {
-              text: 'ROM Quartus',
-              link: '/reference/entities/generic_rom_quartus',
-            }, {
               text: 'Extensor de Sinal',
               link: '/reference/entities/generic_signal_extender',
             },
@@ -159,25 +167,17 @@ export const sidebar : DefaultTheme.Sidebar = {
         },
       ],
     }, {
-      text: 'Especificação',
-      items: [
-        {
-          text: 'Conjunto de Instruções',
-          link: '/reference/isa/',
-        }, {
-          text: 'Pseudo-instruções',
-          link: '/reference/isa/pseudo',
-        },
-      ],
-    }, /* {
       text: 'Testes',
       items: [
         {
-          text: 'Estrutura',
-        }, {
-          text: 'Utilidades',
+        //   text: 'Estrutura',
+        // }, {
+        //   text: 'Utilidades',
+        // }, {
+          text: 'Exemplo',
+          link: 'reference/tests/example'
         },
       ],
-    }, */
+    },
   ],
 }
