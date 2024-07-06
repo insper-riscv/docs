@@ -66,6 +66,11 @@
     filter: saturate(200%) invert(80%) hue-rotate(180deg) contrast(130%);
 }
 
+.image-fit {
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+}
+
 table {
     width: 100%;
     max-width: 100%;
