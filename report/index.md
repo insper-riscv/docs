@@ -11,4 +11,4 @@ next: false
 
 ## Capstone 2024.2
 
-Em breve...
+[Leia o paper &rarr;](/documents/2024_2-report.pdf)

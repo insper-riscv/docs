@@ -14,6 +14,10 @@ export const sidebar : DefaultTheme.Sidebar = {
           text: 'Relatório 2024.1',
           link: '/report/2024_1/',
         },
+        {
+          text: 'Relatório 2024.2',
+          link: '/docs/documents/2024_2-report.pdf',
+        },
       ],
     },
   ],

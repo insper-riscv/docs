@@ -141,7 +141,7 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 ## Equipe Capstone 2024.2
 
-[<Badge type="tip" text="Relatório ⧉"/>](https://insper-riscv.github.io/docs/report/2024_2/)
+[<Badge type="tip" text="Paper ⧉"/>](/documents/2024_2-report.pdf)
 
 <VPTeamMembers :members="$frontmatter.members24_2" size="small" />
 
