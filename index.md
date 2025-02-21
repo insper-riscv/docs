@@ -20,30 +20,30 @@ hero:
       theme: alt
 
 features:
-  - title: RISC-V Bare Metal
-    details: Especificação de arquitetura aberta, modular e hierárquico habilitado para sistemas operacionais em tempo real.
-    link: https://wiki.riscv.org
-    linkText: Saiba mais
   - title: Visual Studio Code e Docker
     details: Editor de texto customizável e ambiente de desenvolvimento conteinerizado pré-configurado.
     link: https://code.visualstudio.com/docs/devcontainers/containers
     linkText: Saiba mais
+    icon:
+      src: /images/vs-code.png
   - title: Intel® Quartus® Prime Lite
     details: Plataforma de desenvolvimento para placas FPGA Intel inclusa programável por servidor JTAG.
     link: https://www.intel.com.br/content/www/br/pt/products/details/fpga/development-tools/quartus-prime.html
     linkText: Saiba mais
-  - title: Cocotb e Pytest
-    details: Framework de testes unitários e de integração para linguagens HDL
-    link: https://cocotb.org/
-    linkText: Saiba mais
-  - title: OSS CAD Suite
-    details: Framework de Síntese de hardware Open-Source
+    icon:
+      src: /images/intel-quartus-prime.png
+  - title: TerosIDE e OSS CAD Suite
+    details: Distribuição de software binário para síntese RTL, verificação formal de hardware, programação FPGA, testes e mais.
     link: https://www.yosyshq.com/open-source
     linkText: Saiba mais
-  - title: Wavedrom e Netlistsvg
-    details: Ferramentas de visualização de síntese e simulação
-    link: https://wavedrom.com/
+    icon:
+      src: /images/teroshdl.png
+  - title: Cocotb e Pytest
+    details: Framework de testes unitários e de integração para linguagens HDL com visualização de síntese e simulação
+    link: https://cocotb.org/
     linkText: Saiba mais
+    icon:
+      src: /images/python.png
 
 org:
   - name: CTI Renato Archer
