@@ -36,9 +36,9 @@ features:
     details: Framework de testes unitários e de integração para linguagens HDL
     link: https://cocotb.org/
     linkText: Saiba mais
-  - title: GHDL + Yosys
+  - title: OSS CAD Suite
     details: Framework de Síntese de hardware Open-Source
-    link: https://ghdl.github.io/ghdl/about.html
+    link: https://www.yosyshq.com/open-source
     linkText: Saiba mais
   - title: Wavedrom e Netlistsvg
     details: Ferramentas de visualização de síntese e simulação
@@ -48,18 +48,24 @@ features:
 org:
   - name: CTI Renato Archer
     title: Realização
+    org: MCTI
+    orgLink: https://www.gov.br/mcti/pt-br
     avatar: /docs/images/members/cti-renato-archer.jpg
     links:
       - icon: linkedin
         link: https://www.linkedin.com/company/cti-renato-archer/
   - name: Saulo Finco
     title: Mentor
+    org: MCTI
+    orgLink: https://www.gov.br/mcti/pt-br
     avatar: /docs/images/members/saulofinco.jpg
     links:
       - icon: linkedin
         link: https://www.linkedin.com/in/saulofinco
   - name: Rafael Corsi
     title: Orientador
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/rafael-corsi-ferrão-624238116.jpg
     links:
       - icon: linkedin
@@ -70,6 +76,8 @@ org:
 members24_1:
   - name: Giancarlo Ruggiero
     title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/giancarlo-vr.jpg
     links:
       - icon: linkedin
@@ -78,6 +86,8 @@ members24_1:
         link: https://github.com/gianvr
   - name: Luciano Felix
     title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/luciano-felix.jpg
     links:
       - icon: linkedin
@@ -86,6 +96,8 @@ members24_1:
         link: https://github.com/FelixLuciano
   - name: Tiago Seixas
     title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/tiago-seixas-bb9614254.jpg
     links:
       - icon: linkedin
@@ -96,6 +108,8 @@ members24_1:
 members24_2:
   - name: Arthur Barreto
     title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/arthur-martins-de-souza-barreto.jpg
     links:
       - icon: linkedin
@@ -104,6 +118,8 @@ members24_2:
         link: https://github.com/Arthur-Barreto
   - name: Eduardo Barros
     title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/eduardosmb.jpg
     links:
       - icon: linkedin
@@ -112,6 +128,8 @@ members24_2:
         link: https://github.com/eduardosmb
   - name: Rodrigo Patelli
     title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/rodrigo-anciães-patelli.jpg
     links:
       - icon: linkedin
@@ -120,12 +138,74 @@ members24_2:
         link: https://github.com/RodrigoAnciaes
   - name: Vitor Assis
     title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
     avatar: /docs/images/members/victorlga.jpg
     links:
       - icon: linkedin
         link: https://www.linkedin.com/in/victorlga/
       - icon: github
         link: https://github.com/victorlga
+
+members25_1:
+  - name: Caio Travain
+    title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
+    avatar: /docs/images/members/caiotravain.png
+    links:
+      - icon: linkedin
+        link: https://www.linkedin.com/in/caio-travain-6101b4226/
+      - icon: github
+        link: https://github.com/caiotravain
+  - name: Pedro Portella
+    title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
+    # avatar: /docs/images/members/avatar.jpg
+    # links:
+    #   - icon: linkedin
+    #     link: https://www.linkedin.com/in/username/
+    #   - icon: github
+    #     link: https://github.com/username
+  - name: Pedro do Amaral
+    title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
+    avatar: /docs/images/members/pcliquet.jpg
+    links:
+      - icon: linkedin
+        link: https://www.linkedin.com/in/pedro-cliquet-do-amaral-02591b178/
+      - icon: github
+        link: https://github.com/pcliquet
+  - name: Pedro Paulo Camargo
+    title: Desenvolvedor
+    org: Insper
+    orgLink: https://www.insper.edu.br
+    avatar: /docs/images/members/PedroPauloMorenoCamargo.jpg
+    links:
+      - icon: linkedin
+        link: https://www.linkedin.com/in/pedro-paulo-moreno-camargo-93945a177/
+      - icon: github
+        link: https://github.com/PedroPauloMorenoCamargo
+
+members_ecen_tamu_2024:
+  - name: Eddie Villegas
+    title: Contribuidor
+    avatar: /docs/images/members/eddie-villegas-29431b253.jpg
+    org: ECEN TAMU
+    orgLink: https://engineering.tamu.edu/electrical/index.html
+    links:
+      - icon: linkedin
+        link: https://www.linkedin.com/in/eddie-villegas-29431b253/
+  - name: Jadon Dewey
+    title: Contribuidor
+    avatar: /docs/images/members/jadon-dewey-1957b5236.jpg
+    org: ECEN TAMU
+    orgLink: https://engineering.tamu.edu/electrical/index.html
+    links:
+      - icon: linkedin
+        link: https://www.linkedin.com/in/jadon-dewey-1957b5236/
 
 ---
 
@@ -139,11 +219,17 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 <VPTeamMembers :members="$frontmatter.org" />
 
+## Equipe Capstone 2025.1
+
+<VPTeamMembers :members="$frontmatter.members25_1" size="small" />
+<VPTeamMembers :members="$frontmatter.members_ecen_tamu_2024" size="small" />
+
 ## Equipe Capstone 2024.2
 
 [<Badge type="tip" text="Paper ⧉"/>](/documents/2024_2-report.pdf)
 
 <VPTeamMembers :members="$frontmatter.members24_2" size="small" />
+<VPTeamMembers :members="$frontmatter.members_ecen_tamu_2024" size="small" />
 
 ## Equipe Capstone 2024.1
 
