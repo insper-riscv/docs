@@ -2,9 +2,9 @@
 outline: [2, 3]
 ---
 
-# Pacote RISC-V inteiros 32-bit <Badge type="info" text="WORK.RV32I" />
+# Pacote RISC-V para inteiros 32-bit
 
-[<Badge type="tip" text="Arquivo: RV32I.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/RV32I.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/RV32I.vhd" style="margin: 1rem 0;" />
 
 Parâmetros e funções que descrevem o conjunto de instruções RISC-V de 32 bits para inteiros. Abstrato em relação a implementação.
 

@@ -2,9 +2,9 @@
 outline: [2, 3]
 ---
 
-# Pacote RISC-V extensão M <Badge type="info" text="WORK.RV32M" />
+# Pacote RISC-V para extensão M
 
-[<Badge type="tip" text="Arquivo: RV32M.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/RV32M.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/RV32M.vhd" style="margin: 1rem 0;" />
 
 ::: danger EM BREVE
 

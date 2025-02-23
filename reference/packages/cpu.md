@@ -2,9 +2,9 @@
 outline: [2, 3]
 ---
 
-# Pacote CPU <Badge type="info" text="WORK.CPI" />
+# Pacote CPU
 
-[<Badge type="tip" text="Arquivo: CPU.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/CPU.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/CPU.vhd" style="margin: 1rem 0;" />
 
 Para a topologia, um conjunto de registros foi criado para definir o fluxo de
 dados em alto nível. Isso possibilita simplificar a implementação de pipelining

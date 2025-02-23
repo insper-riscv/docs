@@ -2,9 +2,9 @@
 outline: [2, 3]
 ---
 
-# Pacote Genéricos <Badge type="info" text="WORK.GENERICS" />
+# Pacote Genéricos
 
-[<Badge type="tip" text="Arquivo: GENERICS.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERICS.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERICS.vhd" style="margin: 1rem 0;" />
 
 Funções auxiliares de lógica abstrata, genérica para todos os casos.
 
