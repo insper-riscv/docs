@@ -163,11 +163,11 @@ members25_1:
     org: Insper
     orgLink: https://www.insper.edu.br
     # avatar: /docs/images/members/avatar.jpg
-    # links:
+    links:
     #   - icon: linkedin
     #     link: https://www.linkedin.com/in/username/
-    #   - icon: github
-    #     link: https://github.com/username
+      - icon: github
+        link: https://github.com/Vacbo
   - name: Pedro do Amaral
     title: Desenvolvedor
     org: Insper
