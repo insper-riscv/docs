@@ -10,14 +10,17 @@ hero:
     dark: /images/RISC-V_Stacked_White_Yellow.svg
     alt: RISC-V
   actions:
-    - text: Projeto
-      link: https://github.com/insper-riscv/core/
-    - text: Introdução
+    - text: Guia
       link: /guide/
       theme: alt
-    - text: Arquitetura
+    - text: Referência
       link: /reference/
       theme: alt
+    - text: Relatórios
+      link: /reports/
+      theme: alt
+    - text: Projeto ⧉
+      link: https://github.com/insper-riscv/core/
 
 features:
   - title: Visual Studio Code e Docker
@@ -213,8 +216,6 @@ members_ecen_tamu_2024:
 import { VPTeamMembers } from 'vitepress/theme'
 </script>
 
-<!--@include: @/report/2024_1/.resumo.md-->
-
 ## Organização
 
 <VPTeamMembers :members="$frontmatter.org" />
@@ -226,14 +227,13 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 ## Equipe Capstone 2024.2
 
-[<Badge type="tip" text="Paper ⧉"/>](/documents/2024_2-report.pdf)
+<VPButton theme="alt" text="Leia o paper &rarr;" href="/docs/documents/2024_2-report.pdf" />
 
 <VPTeamMembers :members="$frontmatter.members24_2" size="small" />
 <VPTeamMembers :members="$frontmatter.members_ecen_tamu_2024" size="small" />
 
 ## Equipe Capstone 2024.1
 
-[<Badge type="tip" text="Saiba mais ⧉"/>](https://www.insper.edu.br/pt/noticias/2024/5/alunos-desenvolvem-processador-para-o-ministerio-da-ciencia--tec)
-[<Badge type="tip" text="Relatório ⧉"/>](/report/2024_1/)
+<VPButton theme="alt" text="Leia o relatório &rarr;" href="/docs/documents/2024_1-report.pdf" /> <VPButton text="Matéria oficial ⧉" href="https://www.insper.edu.br/pt/noticias/2024/5/alunos-desenvolvem-processador-para-o-ministerio-da-ciencia--tec" />
 
 <VPTeamMembers :members="$frontmatter.members24_1" size="small" />
