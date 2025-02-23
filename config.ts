@@ -21,11 +21,8 @@ export const pt = defineConfig({
         text: 'Mais',
         items: [
           {
-            text: 'Relatório',
-            link: '/report/'
-          }, {
-            text: 'Bibliografia',
-            link: '/guide/bibliography'
+            text: 'Relatórios',
+            link: '/reports/'
           }, {
             text: 'Insper Capstone',
             link: 'https://www.insper.edu.br/pfe/'
@@ -43,7 +40,6 @@ export const pt = defineConfig({
     sidebar: {
       ...guideSidebar,
       ...referenceSidebar,
-      ...reportSidebar,
     },
 
     editLink: {
