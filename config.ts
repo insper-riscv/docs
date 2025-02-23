@@ -76,7 +76,7 @@ export const pt = defineConfig({
   
     footer: {
       message: 'Publicado sob a Licença MIT.',
-      copyright: 'Copyright © 2024',
+      copyright: 'Copyright © 2025 Insper RISC-V',
     },
   },
 })
