@@ -2,50 +2,42 @@
 outline: 2
 ---
 
-# Extensor de Sinal
+# Extensor de Sinal <Badge type="info" text="WORK.GENERIC_SIGNAL_EXTENDER" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_SIGNAL_EXTENDER.vhd" target="blank"><Badge type="tip" text="GENERIC_SIGNAL_EXTENDER.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_SIGNAL_EXTENDER.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_SIGNAL_EXTENDER.vhd)
 
-Memória de apenas leitura.
+Extende a largura de um vetor
 
 ## Topologia
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_signal_extender_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_SIGNAL_EXTENDER.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_SIGNAL_EXTENDER is
+| Generic name        | Tipo    | Valor | Descrição                   |
+| ------------------- | ------- | ----- | --------------------------- |
+| `SOURCE_WIDTH`      | natural | 4     | Largura do vetor de entrada |
+| `DESTINATION_WIDTH` | natural | 8     | Largura do vetor de saída   |
 
-    generic (
-        SOURCE_WIDTH      : natural := 4;
-        DESTINATION_WIDTH : natural := 8
-    );
+## Portas
 
-    port (
-        source          : in  std_logic_vector((SOURCE_WIDTH - 1) downto 0);
-        enable_unsigned : in  std_logic := '0';
-        destination     : out std_logic_vector((DESTINATION_WIDTH - 1) downto 0)
-    );
-
-end entity;
-```
-
-- `SOURCE_WIDTH`: Largura do vetor de entrada.
-- `DESTINATION_WIDTH`: Largura do vetor de saída.
-- `source`: Vetor de entrada.
-- `enable_unsigned`: Habilita extensão lógica ao invés de aritmética (sem sinal).
-- `destination`: Vetor de saída.
+| Nome              | Direção | Tipo                                | Descrição                                                   |
+| ----------------- | ------- | ----------------------------------- | ----------------------------------------------------------- |
+| `source`          | input   | std_logic_vector<SOURCE_WIDTH>      | Vetor de entrada                                            |
+| `enable_unsigned` | input   | std_logic                           | Habilita extensão lógica ao invés de aritmética (sem sinal) |
+| `destination`     | output  | std_logic_vector<DESTINATION_WIDTH> | Vetor de saída                                              |
 
 ## Usagem
 
 ### Extensão de Byte
 
-Extende um sinal menor em outro maior. Para valores inteiros com sinal, preenche com o bit mais significativo a esquerda. Ex: de `10101010` para `1111111110101010` ou `0000000010101010` a depender de `enable_unsigned`.
+Extende um sinal menor em outro maior. Para valores inteiros com sinal, preenche
+com o bit mais significativo a esquerda. Ex: de `10101010` para
+`1111111110101010` ou `0000000010101010` a depender de `enable_unsigned`.
 
 ```vhdl
 EXTEND_BYTE: entity WORK.GENERIC_SIGNAL_EXTENDER(LOWER_EXTEND)
@@ -62,7 +54,8 @@ EXTEND_BYTE: entity WORK.GENERIC_SIGNAL_EXTENDER(LOWER_EXTEND)
 
 ### Extensão superior
 
-Extende um sinal menor em outro maior, preenchendo com sinal lógico baixo a direita. Ex: de `10101010` para `1010101000000000`.
+Extende um sinal menor em outro maior, preenchendo com sinal lógico baixo a
+direita. Ex: de `10101010` para `1010101000000000`.
 
 ```vhdl
 EXTEND_HALFWORD: entity WORK.GENERIC_SIGNAL_EXTENDER(LOGICAL_UPPER)
@@ -97,10 +90,9 @@ Forma de onda:
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 do Extensor de Sinal](/images/reference/entities/tb_generic_signal_extender_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 do Extensor de Sinal](/images/reference/entities/tb_generic_signal_extender_case_1.svg){.w-full.dark-invert}
 
 </pan-container>
-
 ```
 
 :::

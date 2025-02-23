@@ -2,48 +2,28 @@
 outline: 2
 ---
 
-# ROM
+# ROM <Badge type="info" text="WORK.GENERIC_ROM" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_ROM.vhd" target="blank"><Badge type="tip" text="GENERIC_ROM.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_ROM.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_ROM.vhd)
 
-Memória de apenas leitura.
+Memória de apenas leitura
 
 ## Topologia
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_rom_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_ROM.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_ROM is
-
-    generic (
-        DATA_WIDTH        : natural := 8;
-        ADDRESS_WIDTH     : natural := 8;
-        ADDRESSABLE_WIDTH : natural := 7;
-        INIT_FILE         : string  := "../data/mif/generic_rom_dummy.mif"
-    );
-
-    port (
-        clock       : in  std_logic := '1';
-        address     : in  std_logic_vector((ADDRESS_WIDTH - 1) downto 0);
-        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0)
-    );
-
-end entity;
-```
-
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `ADDRESS_WIDTH`: Largura do vetore de endereço.
-- `ADDRESSABLE_WIDTH`: Largura do vetor de endereço mapeado na memória.
-- `INIT_FILE`: Arquivo `.mif` de inicialização da memória.
-- `clock`: Sinal de clock.
-- `address`: Vetor de endereço.
-- `destination`: Vetor de dados endereçado.
+| Nome                | Tipo    | Valor | Descrição                                               |
+| ------------------- | ------- | ----- | ------------------------------------------------------- |
+| `DATA_WIDTH`        | natural | 8     | Largura dos vetores de dados                            |
+| `ADDRESS_WIDTH`     | natural | 8     | Largura do vetor de endereço                            |
+| `ADDRESSABLE_WIDTH` | natural | 7     | Largura do vetor de endereço mapeado na memória         |
+| `INIT_FILE`         | string  |       | Caminho para o arquivo .mif de inicialização da memória |
 
 ::: warning ATENÇÃO!
 
@@ -51,11 +31,20 @@ end entity;
 
 :::
 
+## Portas
+
+| Nome        | Direção | Tipo                            | Descrição                 |
+| ----------- | ------- | ------------------------------- | ------------------------- |
+| `clock`       | input   | std_logic                       | Sinal de clock            |
+| `address`     | input   | std_logic_vector<ADDRESS_WIDTH> | Vetor de endereço         |
+| `destination` | output  | std_logic_vector<DATA_WIDTH>    | Vetor de dados endereçado |
+
 ## Usagem
 
 ### ROM Genérica
 
-Implementação a partir de componentes genéricos e lógica a nível de registradores e portas lógicas.
+Implementação a partir de componentes genéricos e lógica a nível de
+registradores e portas lógicas.
 
 ```vhdl
 ROM : entity WORK.GENERIC_ROM(RTL)
@@ -91,7 +80,10 @@ ROM : entity WORK.GENERIC_ROM(SYN)
 
 ::: warning ATENÇÃO!
 
-Para utilizar o IP é preciso incluir o arquivo `GENERIC_ROM_QUARTUS.vhd` ao invés do `GENERIC_ROM.vhd`. Esta usagem da entidade só está disponível para síntese dentro da plataforma de desenvolvimento para placas FPGA Intel® Quartus® Prime Lite
+Para utilizar o IP é preciso incluir o arquivo `GENERIC_ROM_QUARTUS.vhd` ao
+invés do `GENERIC_ROM.vhd`. Esta usagem da entidade só está disponível para
+síntese dentro da plataforma de desenvolvimento para placas FPGA Intel® Quartus®
+Prime Lite
 
 :::
 
@@ -99,7 +91,8 @@ Para utilizar o IP é preciso incluir o arquivo `GENERIC_ROM_QUARTUS.vhd` ao inv
 
 <pan-container>
 
-![Diagrama de RTL da ROM](/images/reference/entities/generic_rom_netlist.svg){.w-full .dark-invert}
+![Diagrama de RTL da ROM](/images/reference/entities/generic_rom_netlist.svg){.w-full
+.dark-invert}
 
 </pan-container>
 
@@ -111,6 +104,7 @@ Para utilizar o IP é preciso incluir o arquivo `GENERIC_ROM_QUARTUS.vhd` ao inv
 
 <pan-container :grid="false">
 
-![Forma de onda do caso de teste 1 da ROM](/images/reference/entities/tb_generic_rom_case_1.svg){.w-full .dark-invert}
+![Forma de onda do caso de teste 1 da ROM](/images/reference/entities/tb_generic_rom_case_1.svg){.w-full
+.dark-invert}
 
 </pan-container>

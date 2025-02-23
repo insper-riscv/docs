@@ -2,46 +2,36 @@
 outline: 2
 ---
 
-# Comparador
+# Comparador <Badge type="info" text="WORK.GENERIC_COMPARATOR" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_COMPARATOR.vhd" target="blank"><Badge type="tip" text="GENERIC_COMPARATOR.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_COMPARATOR.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_COMPARATOR.vhd)
 
-Realiza operações aritmética de comparação entre dois inteiros positivos codificados em vetores booleanos.
+Realiza operações aritmética de comparação entre dois inteiros positivos
+codificados em vetores booleanos
 
 ## Topologia
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_comparator_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_COMPARATOR.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Generics
 
-```vhdl
-entity GENERIC_COMPARATOR is
+| Generic name | Tipo    | Valor | Descrição                    |
+| ------------ | ------- | ----- | ---------------------------- |
+| `DATA_WIDTH` | natural | 8     | Largura dos vetores de dados |
 
-    generic (
-        DATA_WIDTH : natural := 8
-    );
+## Ports
 
-    port (
-        source_1      : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_2      : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        flag_equal    : out std_logic;
-        flag_less     : out std_logic;
-        flag_greather : out std_logic
-    );
-
-end entity;
-```
-
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `source_1`: Dados da comparação.
-- `source_2`: Dados da comparação.
-- `flag_equal`: Resultado da comparação `source_1 = source_2`.
-- `flag_less`: Resultado da comparação `source_1 < source_2`.
-- `flag_greather`: Resultado da comparação `source_1 > source_2`.
+| Nome            | Direção | Tipo                         | Descrição                                     |
+| --------------- | ------- | ---------------------------- | --------------------------------------------- |
+| `source_1`      | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados primário                       |
+| `source_2`      | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados secundário                     |
+| `flag_equal`    | output  | std_logic                    | Resultado da comparação `source_1 = source_2` |
+| `flag_less`     | output  | std_logic                    | Resultado da comparação `source_1 < source_2` |
+| `flag_greather` | output  | std_logic                    | Resultado da comparação `source_1 > source_2` |
 
 ## Usagem
 

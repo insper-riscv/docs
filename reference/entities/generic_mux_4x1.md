@@ -2,48 +2,36 @@
 outline: 2
 ---
 
-# Multiplexador 4x1
+# Multiplexador 4x1 <Badge type="info" text="WORK.GENERIC_MUX_4X1" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_4X1.vhd" target="blank"><Badge type="tip" text="GENERIC_MUX_4X1.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_MUX_4X1.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_4X1.vhd)
 
-Atribui saída conforme entrada selecionada dentre quatro.
+Atribui saída conforme entrada selecionada dentre quatro
 
 ## Topologia
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_mux_4x1_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_MUX_4X1.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_MUX_4X1 is
+| Nome         | Tipo    | Valor | Descrição                    |
+| ------------ | ------- | ----- | ---------------------------- |
+| `DATA_WIDTH` | natural | 8     | Largura dos vetores de dados |
 
-    generic (
-        DATA_WIDTH : natural := 8
-    );
+## Portas
 
-    port (
-        selector    : in  std_logic                                   := '0';
-        source_1    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_2    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_3    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_4    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0)
-    );
-
-end entity;
-```
-
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `selector`: Seletor dos vetores de dados.
-- `source_1`: Vetor de dados.
-- `source_2`: Vetor de dados.
-- `source_3`: Vetor de dados.
-- `source_4`: Vetor de dados.
-- `destination`: Vetor de dados selecionado.
+| Nome          | Direção | Tipo                         | Descrição                    |
+| ------------- | ------- | ---------------------------- | ---------------------------- |
+| `selector`    | input   | std_logic_vector<2> | Seletor dos vetores de dados |
+| `source_1`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 1             |
+| `source_2`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 2             |
+| `source_3`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 3             |
+| `source_4`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 4             |
+| `destination` | output  | std_logic_vector<DATA_WIDTH> | Vetor de dados selecionado   |
 
 ## Usagem
 

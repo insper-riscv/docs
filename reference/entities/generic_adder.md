@@ -2,44 +2,41 @@
 outline: 2
 ---
 
-# Somador
+# Somador <Badge type="info" text="WORK.GENERIC_ADDER" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_ADDER.vhd" target="blank"><Badge type="tip" text="GENERIC_ADDER.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_ADDER.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_ADDER.vhd)
 
-Realiza operação aritmética de soma entre dois inteiros codificados em vetores booleanos.
+Realiza operação aritmética de soma entre dois inteiros codificados em vetores
+booleanos.
 
-## Topologia
+## Diagrama
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_adder_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_ADDER.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_ADDER is
+| Nome               | Tipo    | Valor | Descrição                                           |
+| ------------------ | ------- | ----- | --------------------------------------------------- |
+| `DATA_WIDTH`       | natural | 8     | Largura dos vetores de dados                        |
+| `DEFAULT_SOURCE_2` | integer | 1     | Dispensa necessidade de atribuir entrada `source_2` |
 
-    generic (
-        DATA_WIDTH       : natural := 8;
-        DEFAULT_SOURCE_2 : integer := 1
-    );
+## Portas
 
-    port (
-        source_1    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_2    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := std_logic_vector(to_signed(DEFAULT_SOURCE_2, DATA_WIDTH));
-        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0)
-    );
+| Nome          | Direção | Tipo                         | Descrição                              |
+| ------------- | ------- | ---------------------------- | -------------------------------------- |
+| `source_1`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados primário                |
+| `source_2`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados secundário              |
+| `destination` | output  | std_logic_vector<DATA_WIDTH> | Resultado da soma dos vetores de dados |
 
-end entity;
-```
+## Instâncias
 
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `DEFAULT_SOURCE_2`: Dispensa necessidade de atribuir entrada `source_2`.
-- `source_1`: Dados da soma.
-- `source_2`: Dados da soma.
-- `destination`: Resultado da soma `source_1 + source_2`.
+| Nome              | Entidade                       |
+| ----------------- | ------------------------------ |
+| `CARRY_LOOKAHEAD` | `WORK.GENERIC_CARRY_LOOKAHEAD` |
 
 ## Usagem
 

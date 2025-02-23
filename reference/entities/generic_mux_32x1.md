@@ -2,104 +2,64 @@
 outline: 2
 ---
 
-# Multiplexador 32x1
+# Multiplexador 32x1 <Badge type="info" text="WORK.GENERIC_MUX_32X1" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_32X1.vhd" target="blank"><Badge type="tip" text="GENERIC_MUX_32X1.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_MUX_32X1.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_32X1.vhd)
 
-Atribui saída conforme entrada selecionada dentre trinta e duas.
+Atribui saída conforme entrada selecionada dentre trinda e duas
 
 ## Topologia
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_mux_32x1_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_MUX_32X1.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_MUX_4X1 is
+| Nome         | Tipo    | Valor | Descrição                    |
+| ------------ | ------- | ----- | ---------------------------- |
+| `DATA_WIDTH` | natural | 8     | Largura dos vetores de dados |
 
-    generic (
-        DATA_WIDTH : natural := 8
-    );
+## Portas
 
-    port (
-        selector    : in  std_logic_vector(4 downto 0)                := (others => '0');
-        source_1    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_2    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_3    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_4    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_5    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_6    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_7    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_8    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_9    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_10   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_11   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_12   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_13   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_14   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_15   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_16   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_17   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_18   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_19   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_20   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_21   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_22   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_23   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_24   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_25   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_26   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_27   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_28   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_29   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_30   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_31   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_32   : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0')
-    );
-
-end entity;
-```
-
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `selector`: Seletor dos vetores de dados.
-- `source_1`: Vetor de dados.
-- `source_2`: Vetor de dados.
-- `source_3`: Vetor de dados.
-- `source_4`: Vetor de dados.
-- `source_5`: Vetor de dados.
-- `source_6`: Vetor de dados.
-- `source_7`: Vetor de dados.
-- `source_8`: Vetor de dados.
-- `source_9`: Vetor de dados.
-- `source_10`: Vetor de dados.
-- `source_11`: Vetor de dados.
-- `source_12`: Vetor de dados.
-- `source_13`: Vetor de dados.
-- `source_14`: Vetor de dados.
-- `source_15`: Vetor de dados.
-- `source_16`: Vetor de dados.
-- `source_17`: Vetor de dados.
-- `source_18`: Vetor de dados.
-- `source_19`: Vetor de dados.
-- `source_20`: Vetor de dados.
-- `source_21`: Vetor de dados.
-- `source_22`: Vetor de dados.
-- `source_23`: Vetor de dados.
-- `source_24`: Vetor de dados.
-- `source_25`: Vetor de dados.
-- `source_26`: Vetor de dados.
-- `source_27`: Vetor de dados.
-- `source_28`: Vetor de dados.
-- `source_29`: Vetor de dados.
-- `source_30`: Vetor de dados.
-- `source_31`: Vetor de dados.
-- `source_32`: Vetor de dados.
-- `destination`: Vetor de dados selecionado.
+| Nome          | Direção | Tipo                         | Descrição                    |
+| ------------- | ------- | ---------------------------- | ---------------------------- |
+| `selector`    | input   | std_logic_vector<5>          | Seletor dos vetores de dados |
+| `source_1`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 1             |
+| `source_2`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 2             |
+| `source_3`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 3             |
+| `source_4`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 4             |
+| `source_5`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 5             |
+| `source_6`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 6             |
+| `source_7`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 7             |
+| `source_8`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 8             |
+| `source_9`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 9             |
+| `source_10`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 10            |
+| `source_11`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 11            |
+| `source_12`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 12            |
+| `source_13`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 13            |
+| `source_14`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 14            |
+| `source_15`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 15            |
+| `source_16`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 16            |
+| `source_17`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 17            |
+| `source_18`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 18            |
+| `source_19`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 19            |
+| `source_20`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 20            |
+| `source_21`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 21            |
+| `source_22`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 22            |
+| `source_23`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 23            |
+| `source_24`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 24            |
+| `source_25`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 25            |
+| `source_26`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 26            |
+| `source_27`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 27            |
+| `source_28`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 28            |
+| `source_29`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 29            |
+| `source_30`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 30            |
+| `source_31`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 31            |
+| `source_32`   | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 32            |
+| `destination` | output  | std_logic_vector<DATA_WIDTH> | Vetor de dados selecionado   |
 
 ## Usagem
 
@@ -170,7 +130,6 @@ Forma de onda:
 ![Forma de onda do caso de teste 1 do mux 32x1](/images/reference/entities/tb_generic_mux_32x1_case_1.svg){.w-full .dark-invert}
 
 </pan-container>
-
 ```
 
 :::

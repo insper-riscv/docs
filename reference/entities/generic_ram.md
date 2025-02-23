@@ -2,60 +2,55 @@
 outline: 2
 ---
 
-# RAM
+# RAM <Badge type="info" text="WORK.GENERIC_RAM" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_RAM.vhd" target="blank"><Badge type="tip" text="GENERIC_RAM.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_RAM.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_RAM.vhd)
 
-Memória de acesso randômico.
+Memória de acesso aleatório
 
 ## Topologia
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_ram_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_RAM.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_RAM is
-
-    generic (
-        DATA_WIDTH        : natural := 8;
-        ADDRESS_WIDTH     : natural := 8;
-        ADDRESSABLE_WIDTH : natural := 7
-    );
-
-    port (
-        clock        : in  std_logic;
-        enable       : in  std_logic;
-        enable_read  : in  std_logic;
-        enable_write : in  std_logic;
-        address      : in  std_logic_vector((ADDRESS_WIDTH - 1) downto 0);
-        source       : in  std_logic_vector((DATA_WIDTH - 1) downto 0);
-        destination  : out std_logic_vector((DATA_WIDTH - 1) downto 0)
-    );
-
-end entity;
-```
-
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `ADDRESS_WIDTH`: Largura do vetore de endereço.
-- `ADDRESSABLE_WIDTH`: Largura do vetor de endereço mapeado na memória.
-- `clock`: Sinal de clock.
-- `enable`: Habilita a entidade.
-- `enable_read`: Habilita leitura. Caso contrário, `destination` assume sinal de alta impedância.
-- `enable_write`: Habilita escrita.
-- `address`: Vetor de endereço.
-- `source`: Vetor de dados para escrita.
-- `destination`: Vetor de dados endereçado.
+| Nome                | Tipo    | Valor | Descrição                                       |
+| ------------------- | ------- | ----- | ----------------------------------------------- |
+| `DATA_WIDTH`        | natural | 8     | Largura dos vetores de dados                    |
+| `ADDRESS_WIDTH`     | natural | 8     | Largura do vetor de endereço                    |
+| `ADDRESSABLE_WIDTH` | natural | 7     | Largura do vetor de endereço mapeado na memória |
 
 ::: warning ATENÇÃO!
 
 `ADDRESSABLE_WIDTH` deve ser menor ou igual a `ADDRESS_WIDTH`.
 
 :::
+
+## Portas
+
+| Nome           | Direção | Tipo                            | Descrição                                                                     |
+| -------------- | ------- | ------------------------------- | ----------------------------------------------------------------------------- |
+| `clock`        | input   | std_logic                       | Sinal de clock                                                                |
+| `enable`       | input   | std_logic                       | Habilita a entidade                                                           |
+| `enable_read`  | input   | std_logic                       | Habilita leitura. Caso contrário, destination assume sinal de alta impedância |
+| `enable_write` | input   | std_logic                       | Habilita escrita                                                              |
+| `address`      | input   | std_logic_vector<ADDRESS_WIDTH> | Vetor de endereço                                                             |
+| `source`       | input   | std_logic_vector<DATA_WIDTH>    | Vetor de dados para escrita                                                   |
+| `destination`  | output  | std_logic_vector<DATA_WIDTH>    | Vetor de dados endereçado para leitura                                        |
+
+## Processos
+
+### WRITE
+
+Dependências: `clock`
+
+Durante a borda de subida de `clock`, caso tanto `enable`como `enable_write`
+estejam habilitados, atribui o dado `source` ao buffer na posição codificada em
+`address`.
 
 ## Usagem
 

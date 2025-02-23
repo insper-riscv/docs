@@ -2,44 +2,37 @@
 outline: 2
 ---
 
-# _Carry Lookahead_
+# _Carry Lookahead_ <Badge type="info" text="WORK.GENERIC_CARRY_LOOKAHEAD" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_CARRY_LOOKAHEAD.vhd" target="blank"><Badge type="tip" text="GENERIC_CARRY_LOOKAHEAD.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_CARRY_LOOKAHEAD.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_CARRY_LOOKAHEAD.vhd)
 
-Auxilia a implementação do [CLA](https://en.wikipedia.org/wiki/Carry-lookahead_adder) para ganhos de performance em circuitos somadores como o [Somador Genérico](/reference/entities/generic_adder) e a [Unidade de Lógica Aritmética](/reference/entities/rv32i_alu). 
+Auxilia a implementação do
+[CLA](https://en.wikipedia.org/wiki/Carry-lookahead_adder) para ganhos de
+performance em circuitos somadores como o Somador Genérico e a Unidade de Lógica
+Aritmética.
 
 ## Topologia
 
 <pan-container>
 
-![Topologia do Carry Lookahead](/images/reference/entities/generic_carry_lookahead_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_CARRY_LOOKAHEAD.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_CARRY_LOOKAHEAD is
+| Nome         | Tipo    | Valor | Descrição                    |
+| ------------ | ------- | ----- | ---------------------------- |
+| `DATA_WIDTH` | natural | 8     | Largura dos vetores de dados |
 
-    generic(
-        DATA_WIDTH : natural := 8
-    );
+## Portas
 
-    port (
-        carry_in        : in  std_logic                                   := '0';
-        carry_generate  : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        carry_propagate : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        carry_out       : out std_logic_vector((DATA_WIDTH - 1) downto 0)
-    );
-
-end entity;
-```
-
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `carry_in`: Carry de entrada da soma.
-- `carry_generate`: Valores de carry de geração do CLA.
-- `carry_propagate`: Valores de carry de propagação do CLA.
-- `carry_out`: Carry de saída da soma.
+| Nome              | Direção | Tipo                         | Descrição                  |
+| ----------------- | ------- | ---------------------------- | -------------------------- |
+| `carry_in`        | in      | std_logic                    | Carry de entrada da soma   |
+| `carry_generate`  | in      | std_logic_vector<DATA_WIDTH> | Carry de geração do CLA    |
+| `carry_propagate` | in      | std_logic_vector<DATA_WIDTH> | Carry de propagação do CLA |
+| `carry_out`       | out     | std_logic_vector<DATA_WIDTH> | Carry de saída da soma     |
 
 ## Usagem
 

@@ -2,44 +2,34 @@
 outline: 2
 ---
 
-# Multiplexador 2x1
+# Multiplexador 2x1 <Badge type="info" text="WORK.GENERIC_MUX_2X1" />
 
-<a href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_2X1.vhd" target="blank"><Badge type="tip" text="GENERIC_MUX_2X1.vhd &boxbox;" /></a>
+[<Badge type="tip" text="Arquivo: GENERIC_MUX_2X1.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_2X1.vhd)
 
-Atribui saída conforme entrada selecionada dentre duas.
+Atribui saída conforme entrada selecionada dentre duas
 
 ## Topologia
 
 <pan-container>
 
-![alt text](/images/reference/entities/generic_mux_2x1_topology.mermaid.drawio.svg){.w-full .dark-invert}
+![Diagram](/images/reference/entities/GENERIC_MUX_2X1.svg){.w-full .dark-invert}
 
 </pan-container>
 
-## Interface
+## Genericos
 
-```vhdl
-entity GENERIC_MUX_2X1 is
+| Nome         | Tipo    | Valor | Descrição                    |
+| ------------ | ------- | ----- | ---------------------------- |
+| `DATA_WIDTH` | natural | 8     | Largura dos vetores de dados |
 
-    generic (
-        DATA_WIDTH : natural := 8
-    );
+## Portas
 
-    port (
-        selector    : in  std_logic                                   := '0';
-        source_1    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        source_2    : in  std_logic_vector((DATA_WIDTH - 1) downto 0) := (others => '0');
-        destination : out std_logic_vector((DATA_WIDTH - 1) downto 0)
-    );
-
-end entity;
-```
-
-- `DATA_WIDTH`: Largura dos vetores de dados.
-- `selector`: Seletor dos vetores de dados.
-- `source_1`: Vetor de dados.
-- `source_2`: Vetor de dados.
-- `destination`: Vetor de dados selecionado.
+| Nome          | Direção | Tipo                         | Descrição                    |
+| ------------- | ------- | ---------------------------- | ---------------------------- |
+| `selector`    | input   | std_logic                    | Seletor dos vetores de dados |
+| `source_1`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 1             |
+| `source_2`    | input   | std_logic_vector<DATA_WIDTH> | Vetor de dados 2             |
+| `destination` | output  | std_logic_vector<DATA_WIDTH> | Vetor de dados selecionado   |
 
 ## Usagem
 
