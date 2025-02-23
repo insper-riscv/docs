@@ -12,17 +12,21 @@ mapeia pseudo-instruções em instruções do processador.
 
 Load Absolute Address (Carrega Endereço Absoluto).
 
-Sendo `delta` = `symbol - pc`.
+Sendo `delta = symbol - pc`.
 
 ### Formato
 
-`la rd, symbol`
+```asm
+la rd, symbol
+```
 
 ### Implementação
 
-`x[rd] = pc + imm(U) + imm(I)`
+```c
+x[rd] = pc + imm(U) + imm(I)
+```
 
-### Instruções base
+### Instruções pós montagem
 
 ```asm
 auipc rd, delta[31:12] + delta[11]
