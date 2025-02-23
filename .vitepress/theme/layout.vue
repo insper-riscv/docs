@@ -7,11 +7,11 @@ const sponsors = [
         size: 'mini',
         items: [{
                 name: 'RISC-V Brazil',
-                img: '/docs/images/logo-insper-positivo.png',
+                img: '/docs/images/RISC-V_Horizontal_Color.svg',
                 url: 'https://riscvbr.org/',
             }, {
                 name: 'Insper Capstone',
-                img: '/docs/images/RISC-V_Horizontal_Color.svg',
+                img: '/docs/images/logo-insper-positivo.png',
                 url: 'https://www.insper.edu.br/pfe/',
             }, {
                 name: 'Centro de Tecnologia da Informação Renato Archer',
