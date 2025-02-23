@@ -7,6 +7,9 @@ export const sidebar : DefaultTheme.Sidebar = {
       text: 'Especificação',
       items: [
         {
+          text: 'Codificação',
+          link: '/reference/isa/encoding',
+        }, {
           text: 'Conjunto de Instruções',
           link: '/reference/isa/',
         }, {
