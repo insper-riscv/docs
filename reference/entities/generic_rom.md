@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# ROM <Badge type="info" text="WORK.GENERIC_ROM" />
+# ROM
 
-[<Badge type="tip" text="Arquivo: GENERIC_ROM.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_ROM.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_ROM.vhd" style="margin: 1rem 0;" />
 
 Memória de apenas leitura
 
@@ -98,9 +98,9 @@ Prime Lite
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_ROM.py" target="blank"><Badge type="tip" text="test_GENERIC_ROM.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_ROM.py" />
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_ROM_case_1" />
+### `tb_GENERIC_ROM_case_1`
 
 <pan-container :grid="false">
 

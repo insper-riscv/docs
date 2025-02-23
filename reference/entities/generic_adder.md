@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# Somador <Badge type="info" text="WORK.GENERIC_ADDER" />
+# Somador
 
-[<Badge type="tip" text="Arquivo: GENERIC_ADDER.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_ADDER.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_ADDER.vhd" style="margin: 1rem 0;" />
 
 Realiza operação aritmética de soma entre dois inteiros codificados em vetores
 booleanos.
@@ -78,9 +78,9 @@ ADDER : entity WORK.GENERIC_ADDER
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_ADDER.py" target="blank"><Badge type="tip" text="test_GENERIC_ADDER.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_ADDER.py" />
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_ADDER_case_1" />
+### `tb_GENERIC_ADDER_case_1`
 
 <pan-container :grid="false">
 

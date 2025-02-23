@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# RAM <Badge type="info" text="WORK.GENERIC_RAM" />
+# RAM
 
-[<Badge type="tip" text="Arquivo: GENERIC_RAM.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_RAM.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_RAM.vhd" style="margin: 1rem 0;" />
 
 Memória de acesso aleatório
 
@@ -82,9 +82,9 @@ RAM : entity WORK.GENERIC_RAM
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_RAM.py" target="blank"><Badge type="tip" text="test_GENERIC_RAM.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_RAM.py" />
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_RAM_case_1" />
+### `tb_GENERIC_RAM_case_1`
 
 <pan-container :grid="false">
 

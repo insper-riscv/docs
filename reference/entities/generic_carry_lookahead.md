@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# _Carry Lookahead_ <Badge type="info" text="WORK.GENERIC_CARRY_LOOKAHEAD" />
+# _Carry Lookahead_
 
-[<Badge type="tip" text="Arquivo: GENERIC_CARRY_LOOKAHEAD.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_CARRY_LOOKAHEAD.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_CARRY_LOOKAHEAD.vhd" style="margin: 1rem 0;" />
 
 Auxilia a implementação do
 [CLA](https://en.wikipedia.org/wiki/Carry-lookahead_adder) para ganhos de
@@ -58,6 +58,8 @@ CARRY_LOOKAHEAD : entity WORK.GENERIC_CARRY_LOOKAHEAD
 </pan-container>
 
 ## Casos de teste
+
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_CARRY_LOOKAHEAD.py" />
 
 <a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_CARRY_LOOKAHEAD.py" target="blank"><Badge type="tip" text="test_GENERIC_CARRY_LOOKAHEAD.py &boxbox;" /></a>
 

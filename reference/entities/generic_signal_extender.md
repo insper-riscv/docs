@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# Extensor de Sinal <Badge type="info" text="WORK.GENERIC_SIGNAL_EXTENDER" />
+# Extensor de Sinal
 
-[<Badge type="tip" text="Arquivo: GENERIC_SIGNAL_EXTENDER.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_SIGNAL_EXTENDER.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_SIGNAL_EXTENDER.vhd" style="margin: 1rem 0;" />
 
 Extende a largura de um vetor
 
@@ -79,12 +79,12 @@ EXTEND_HALFWORD: entity WORK.GENERIC_SIGNAL_EXTENDER(LOGICAL_UPPER)
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_SIGNAL_EXTENDER.py" target="blank"><Badge type="tip" text="test_GENERIC_SIGNAL_EXTENDER.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_SIGNAL_EXTENDER.py" />
 
 ::: danger TO DO
 
 ```md
-### Caso 1 <Badge type="info" text="tb_generic_signal_extender_case_1" />
+### `tb_generic_signal_extender_case_1`
 
 Forma de onda:
 

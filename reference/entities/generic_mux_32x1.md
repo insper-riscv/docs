@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# Multiplexador 32x1 <Badge type="info" text="WORK.GENERIC_MUX_32X1" />
+# Multiplexador 32x1
 
-[<Badge type="tip" text="Arquivo: GENERIC_MUX_32X1.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_32X1.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_32X1.vhd" style="margin: 1rem 0;" />
 
 Atribui saída conforme entrada selecionada dentre trinda e duas
 
@@ -116,12 +116,12 @@ MUX_32X1 : entity WORK.GENERIC_MUX_32X1
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_COMPARATOR.py" target="blank"><Badge type="tip" text="test_GENERIC_COMPARATOR.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_COMPARATOR.py" />
 
 ::: danger TO DO
 
 ```md
-### Caso 1 <Badge type="info" text="tb_generic_mux_32x1_case_1" />
+### `tb_generic_mux_32x1_case_1`
 
 Forma de onda:
 

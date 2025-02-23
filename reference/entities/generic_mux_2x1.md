@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# Multiplexador 2x1 <Badge type="info" text="WORK.GENERIC_MUX_2X1" />
+# Multiplexador 2x1
 
-[<Badge type="tip" text="Arquivo: GENERIC_MUX_2X1.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_2X1.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_MUX_2X1.vhd" style="margin: 1rem 0;" />
 
 Atribui saída conforme entrada selecionada dentre duas
 
@@ -56,9 +56,9 @@ MUX_1 : entity WORK.GENERIC_MUX_2X1
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_MUX_2X1.py" target="blank"><Badge type="tip" text="test_GENERIC_MUX_2X1.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_MUX_2X1.py" />
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_MUX_2X1_case_1" />
+### `tb_GENERIC_MUX_2X1_case_1`
 
 <pan-container>
 

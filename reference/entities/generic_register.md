@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# Registrador <Badge type="info" text="WORK.GENERIC_REGISTER" />
+# Registrador
 
-[<Badge type="tip" text="Arquivo: GENERIC_REGISTER.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_REGISTER.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_REGISTER.vhd" style="margin: 1rem 0;" />
 
 Registrador de uso geral.
 
@@ -68,9 +68,9 @@ REGISTER_1 : entity WORK.GENERIC_REGISTER
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_REGISTER.py" target="blank"><Badge type="tip" text="test_GENERIC_REGISTER.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_REGISTER.py" />
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_REGISTER_case_1" />
+### `tb_GENERIC_REGISTER_case_1`
 
 <pan-container :grid="false">
 

@@ -2,9 +2,9 @@
 outline: 2
 ---
 
-# Comparador <Badge type="info" text="WORK.GENERIC_COMPARATOR" />
+# Comparador
 
-[<Badge type="tip" text="Arquivo: GENERIC_COMPARATOR.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERIC_COMPARATOR.vhd)
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/src/GENERIC_COMPARATOR.vhd" style="margin: 1rem 0;" />
 
 Realiza operações aritmética de comparação entre dois inteiros positivos
 codificados em vetores booleanos
@@ -59,9 +59,9 @@ COMPARATOR : entity WORK.GENERIC_COMPARATOR
 
 ## Casos de teste
 
-<a href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_COMPARATOR.py" target="blank"><Badge type="tip" text="test_GENERIC_COMPARATOR.py &boxbox;" /></a>
+<VPButton theme="alt" text="Abrir arquivo fonte ⧉" href="https://github.com/insper-riscv/core/blob/main/test/test_GENERIC_COMPARATOR.py" />
 
-### Caso 1 <Badge type="info" text="tb_GENERIC_COMPARATOR_case_1" />
+### `tb_GENERIC_COMPARATOR_case_1`
 
 <pan-container>
 
