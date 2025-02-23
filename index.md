@@ -16,7 +16,7 @@ hero:
       link: /guide/
       theme: alt
     - text: Arquitetura
-      link: /reference/isa/
+      link: /reference/
       theme: alt
 
 features:

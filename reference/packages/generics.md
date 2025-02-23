@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Pacote: GENERICS <Badge type="info" text="WORK.GENERICS" />
+# Pacote Genéricos <Badge type="info" text="WORK.GENERICS" />
 
 [<Badge type="tip" text="Arquivo: GENERICS.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/GENERICS.vhd)
 

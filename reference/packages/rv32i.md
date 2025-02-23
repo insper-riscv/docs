@@ -2,16 +2,11 @@
 outline: [2, 3]
 ---
 
-# Pacote RV32I <Badge type="info" text="WORK.RV32I" />
+# Pacote RISC-V inteiros 32-bit <Badge type="info" text="WORK.RV32I" />
 
 [<Badge type="tip" text="Arquivo: RV32I.vhd &boxbox;" />](https://github.com/insper-riscv/core/blob/main/src/RV32I.vhd)
 
-Para a topologia, um conjunto de registros foi criado para definir o fluxo de
-dados em alto nível. Isso possibilita simplificar a implementação de pipelining
-e manter o código limpo. A partir dos seguintes registros é possível declarar
-todos os pontos de controle e de dados de todo o fluxo de execução da
-arquitetura. Além disso, também são especificados valores que caracterizem o
-comportamento ocioso da arquitetura.
+Parâmetros e funções que descrevem o conjunto de instruções RISC-V de 32 bits para inteiros. Abstrato em relação a implementação.
 
 ## Subtipos
 
