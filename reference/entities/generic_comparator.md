@@ -17,9 +17,9 @@ codificados em vetores booleanos
 
 </pan-container>
 
-## Generics
+## Genericos
 
-| Generic name | Tipo    | Valor | Descrição                    |
+| Nome         | Tipo    | Valor | Descrição                    |
 | ------------ | ------- | ----- | ---------------------------- |
 | `DATA_WIDTH` | natural | 8     | Largura dos vetores de dados |
 

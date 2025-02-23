@@ -18,7 +18,7 @@ Extende a largura de um vetor
 
 ## Genericos
 
-| Generic name        | Tipo    | Valor | Descrição                   |
+| Nome                | Tipo    | Valor | Descrição                   |
 | ------------------- | ------- | ----- | --------------------------- |
 | `SOURCE_WIDTH`      | natural | 4     | Largura do vetor de entrada |
 | `DESTINATION_WIDTH` | natural | 8     | Largura do vetor de saída   |
