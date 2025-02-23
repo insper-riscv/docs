@@ -16,14 +16,22 @@ export const sidebar : DefaultTheme.Sidebar = {
       ],
     }, {
       text: 'Pacotes',
-      collapsed: false,
       items: [
         {
           text: 'CPU',
           link: '/reference/packages/cpu.md',
         }, {
-          text: 'RV32I',
-          link: '/reference/packages/rv32i.md',
+          
+          text: 'RISC-V',
+          items: [
+            {
+              text: 'Inteiros 32-bit',
+              link: '/reference/packages/rv32i.md',
+            }, {
+              text: 'Extensão M',
+              link: '/reference/packages/rv32m.md',
+            }
+          ]
         }, {
           text: 'Genéricos',
           link: '/reference/packages/generics.md',
@@ -31,8 +39,6 @@ export const sidebar : DefaultTheme.Sidebar = {
       ]
     }, {
       text: 'Entidades',
-      link: '/reference/entities/',
-      collapsed: false,
       items: [
         {
           text: 'Top Level',
@@ -170,12 +176,17 @@ export const sidebar : DefaultTheme.Sidebar = {
       text: 'Testes',
       items: [
         {
-        //   text: 'Estrutura',
-        // }, {
-        //   text: 'Utilidades',
-        // }, {
-          text: 'Exemplo',
-          link: 'reference/tests/example'
+          text: 'Dispositivosob Teste',
+          link: '/reference/tests/dispositivo-sob-teste'
+        }, {
+          text: 'Síntese e Elaboração',
+          link: '/reference/tests/sintese-e-elaboracao'
+        }, {
+          text: 'Testes lógicos',
+          link: '/reference/tests/testes-de-logica'
+        }, {
+          text: 'Teste de cobertura',
+          link: '/reference/tests/testes-de-cobertura'
         },
       ],
     },
