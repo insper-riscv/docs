@@ -165,7 +165,7 @@ members25_1:
     title: Desenvolvedor
     org: Insper
     orgLink: https://www.insper.edu.br
-    # avatar: /docs/images/members/avatar.jpg
+    avatar: /docs/images/members/pedro-portella.jpg
     links:
     #   - icon: linkedin
     #     link: https://www.linkedin.com/in/username/
